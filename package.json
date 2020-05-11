@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Atrist/BlogVue/issues"
   },
-  "homepage": "https://github.com/Atrist/BlogVue#readme"
+  "homepage": "https://github.com/Atrist/BlogVue#readme",
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.2.0",
+    "vuepress": "^1.4.1"
+  }
 }

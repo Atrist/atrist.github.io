@@ -1,7 +1,18 @@
 // .vuepress/config.js
 module.exports = {
-
-    title: 'Hello World',
+    title: `Atrist's Blog`,
+    dest: './docs',
     base: '/blogVue/',
-    dest: './docs'
+    themeConfig: {
+        search: false,
+        nav: [{
+            text: 'GITHUB',
+            link: 'https://github.com/Atrist/',
+            target: '_black'
+        }, {
+            text: 'Guide',
+            link: 'www.baidu.com'
+        }]
+    }
+
 }

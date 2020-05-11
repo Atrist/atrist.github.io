@@ -1,16 +1,22 @@
-# VuePress 书写的博客目录
+---
+home: true
+heroImage: /image/home.jpg
+heroText: Atrist's Blog
+tagline: null
+actionText: Let's Begin
+actionLink: null
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
 
-官方中文文档位置
+[[toc]]
 
-[https://vuepress.vuejs.org/zh/](https://vuepress.vuejs.org/zh/)
+## 用例测试
 
-# 安装
-```bash
-npm install -g vuepress
+代码测试
+
+```js
+var i = 0;
+var j = 0;
 ```
 
-# 开始写作
-vuepress dev .
-
-# 构建静态文件
-vuepress build .
+[post](./posts/2018-11-7-frontmatter-in-vuepress.md)
