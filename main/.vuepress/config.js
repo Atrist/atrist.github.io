@@ -3,7 +3,7 @@ module.exports = {
     title: 'Atrist',
     // 编译输出位置
     dest: './docs',
-    base: '/blogVue/',
+    base: '/blog/',
     // blog主题
     theme: '@vuepress/theme-blog',
     markdown: {
