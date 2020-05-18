@@ -22,6 +22,9 @@ module.exports = {
                 text: 'Tags',
                 link: '/tag/',
             }, {
+                text: 'Resume',
+                link: '/1970/01/01/resume/'
+            }, {
                 text: 'Github',
                 link: 'https://github.com/Atrist'
             }
@@ -32,7 +35,7 @@ module.exports = {
                 link: 'https://github.com/Atrist',
             }],
             copyright: [{
-                text: 'MIT Licensed | Copyright © 2018-present',
+                text: 'Copyright © 2018-present',
                 link: '',
             }],
         },

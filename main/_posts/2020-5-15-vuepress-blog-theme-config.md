@@ -97,3 +97,10 @@ module.exports = {
 ## 这是二级标题
 
 ### 这是三级标题
+
+## markdown 中使用 Vue
+
+官网的教程: [https://vuepress.vuejs.org/zh/guide/using-vue.html](https://vuepress.vuejs.org/zh/guide/using-vue.html)
+
+1. 在`.vuepress/components`中编写自己组件,命名格式为:`*.vue`
+2. 在 markdown 中使用
