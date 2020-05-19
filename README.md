@@ -12,7 +12,7 @@ npm install -g vuepress
 
 ## github Page 地址
 
-[ https://atrist.github.io/blogVue/](https://atrist.github.io/blogVue/)
+[ https://atrist.github.io/blogVue/](https://atrist.github.io/blog/)
 
 # 开始写作
 

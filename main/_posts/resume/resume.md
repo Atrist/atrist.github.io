@@ -31,22 +31,31 @@ github: [https://github.com/atrist](https://github.com/atrist)
 
 <level name="CSS" progress="75"/>
 
-<level name="SCSS" progress="50"/>
+<level name="SCSS" progress="70"/>
 
 <level name="JS" progress="90"/>
 
 <level name="Vue,Vue全家桶" progress="70"/>
 
+### 其他技能点:
+1. 了解Java,python等语言
+2. 了解mongodb,mysql
+3. 熟悉nodejs
+
+
+
 ## 项目经历
 
 ### vue 学习的集成 project
 
-项目的 github 地址: [https://github.com/Atrist/projectBigDate](https://github.com/Atrist/projectBigDate)<br/>
-项目成果图: [https://atrist.github.io/projects/#/](https://atrist.github.io/projects/#/)
+项目的 github 地址: [https://github.com/Atrist/projects](https://github.com/Atrist/projects)<br/>
+线上效果: [https://atrist.github.io/projects/#/](https://atrist.github.io/projects/#/)
 
-如今已经有如下目录:
+
 
 ### 基于 vue-admin-template + koa 的大数据
+
+项目的 github 地址: [https://github.com/Atrist/projectBigDate](https://github.com/Atrist/projectBigDate)<br/>
 
 ## 自我评价
 
@@ -57,5 +66,4 @@ github: [https://github.com/atrist](https://github.com/atrist)
 a{
   text-decoration: none;
 }
-
 </style>
