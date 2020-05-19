@@ -1,6 +1,5 @@
 ---
 title: 简历
-date: 1970-01-01
 tags:
   - 简历
 summary: 我的个人简历
@@ -25,19 +24,29 @@ github: [https://github.com/atrist](https://github.com/atrist)
 
 ## 掌握技能
 
-<level name="HTML"  process="80"/>
+<br/>
+<level name="HTML"  progress="80"/>
 
-<level name="CSS" process="75"/>
+<level name="PUG" progress="40"/>
 
-<level name="SCSS" process="50"/>
+<level name="CSS" progress="75"/>
 
-<level name="PUG" process="40"/>
+<level name="SCSS" progress="50"/>
 
-<level name="JS" process="90"/>
+<level name="JS" progress="90"/>
 
-<level name="Vue,Vue全家桶" process="70"/>
+<level name="Vue,Vue全家桶" progress="70"/>
 
 ## 项目经历
+
+### vue 学习的集成 project
+
+项目的 github 地址: [https://github.com/Atrist/projectBigDate](https://github.com/Atrist/projectBigDate)<br/>
+项目成果图: [https://atrist.github.io/projects/#/](https://atrist.github.io/projects/#/)
+
+如今已经有如下目录:
+
+### 基于 vue-admin-template + koa 的大数据
 
 ## 自我评价
 
