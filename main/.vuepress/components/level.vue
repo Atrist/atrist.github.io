@@ -62,7 +62,7 @@ export default {
   props: ["progress", "name"],
   data() {
     return {
-      progressWidth: 100,
+      progressWidth: 100
     };
   },
   methods: {
@@ -72,12 +72,15 @@ export default {
       const wrapWidth = this.$refs.progressWrap.clientWidth;
       const barWidth = (this.progress * wrapWidth) / 100;
       this.progressWidth = barWidth;
-    },
+    }
   },
   mounted() {
-    // 设置长度
-    this.setProgressWidth();
-  },
+    // 整个视图都渲染完毕 再修改progress的宽度
+    this.$nextTick(function() {
+      // 设置长度
+      this.setProgressWidth();
+    });
+  }
   // 当窗口的宽度变化, level相对应的大小也要改变  暂定后面再写
 };
 </script>

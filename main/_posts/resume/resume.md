@@ -1,5 +1,6 @@
 ---
 title: 简历
+date: 1970-01-01
 tags:
   - 简历
 summary: 我的个人简历
@@ -27,22 +28,24 @@ github: [https://github.com/atrist](https://github.com/atrist)
 <br/>
 <level name="HTML"  progress="80"/>
 
-<level name="PUG" progress="40"/>
+<level name="PUG" progress="56"/>
 
-<level name="CSS" progress="75"/>
+<level name="CSS" progress="78"/>
 
-<level name="SCSS" progress="70"/>
+<level name="SCSS" progress="72"/>
 
-<level name="JS" progress="90"/>
+<level name="JS" progress="87"/>
 
-<level name="Vue,Vue全家桶" progress="70"/>
+<level name="Vue,Vue全家桶" progress="75"/>
 
 ### 其他技能点:
-1. 了解Java,python等语言
-2. 了解mongodb,mysql
-3. 熟悉nodejs
 
-
+1. 了解 Java,python 等语言
+2. 了解 mongodb,mysql
+3. 了解 微信小程序的开发
+4. 了解 element-ui 框架
+5. 熟悉 git
+6. 熟悉 nodejs
 
 ## 项目经历
 
@@ -50,8 +53,6 @@ github: [https://github.com/atrist](https://github.com/atrist)
 
 项目的 github 地址: [https://github.com/Atrist/projects](https://github.com/Atrist/projects)<br/>
 线上效果: [https://atrist.github.io/projects/#/](https://atrist.github.io/projects/#/)
-
-
 
 ### 基于 vue-admin-template + koa 的大数据
 
