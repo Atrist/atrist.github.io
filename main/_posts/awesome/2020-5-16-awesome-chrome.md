@@ -24,7 +24,7 @@ summary: 我所使用的一些的chrome插件
 
 选中:立即弹出翻译
 
-![](./image/chrome-translate.png)
+![](./images/chrome-translate.png)
 
 ### 4. vue-Devtools
 
