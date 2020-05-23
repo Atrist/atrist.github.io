@@ -13,6 +13,7 @@ module.exports = {
     },
     themeConfig: {
         // 启用平滑滚动
+        author: 'atrist',
         smoothScroll: true,
         nav: [{
                 text: 'Blog',

@@ -46,6 +46,7 @@ github: [https://github.com/atrist](https://github.com/atrist)
 4. 了解 element-ui 框架
 5. 熟悉 git
 6. 熟悉 nodejs
+7. 熟悉linux操作系统
 
 ## 项目经历
 
