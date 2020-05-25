@@ -26,17 +26,17 @@ github: [https://github.com/atrist](https://github.com/atrist)
 ## 掌握技能
 
 <br/>
-<level name="HTML"  progress="80"/>
+<level name="HTML"  :progress="80" />
 
-<level name="PUG" progress="56"/>
+<level name="PUG" :progress="56" />
 
-<level name="CSS" progress="78"/>
+<level name="CSS" :progress="78" status="success"/>
 
-<level name="SCSS" progress="72"/>
+<level name="SCSS" :progress="72" status="success"/>
 
-<level name="JS" progress="87"/>
+<level name="JS" :progress="87" status="warning" />
 
-<level name="Vue,Vue全家桶" progress="75"/>
+<level name="Vue,Vue全家桶" :progress="75" status="warning"/>
 
 ### 其他技能点:
 
@@ -46,7 +46,7 @@ github: [https://github.com/atrist](https://github.com/atrist)
 4. 了解 element-ui 框架
 5. 熟悉 git
 6. 熟悉 nodejs
-7. 熟悉linux操作系统
+7. 熟悉 linux 操作系统
 
 ## 项目经历
 
