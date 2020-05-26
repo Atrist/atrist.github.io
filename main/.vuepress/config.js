@@ -45,7 +45,9 @@ module.exports = {
             nextText: '下一页', // Text for next links.
             lengthPerPage: '5', // Maximum number of posts per page.
             layout: 'Pagination', // Layout for pagination page
-        }
+        },
+        sidebar: 'auto',
+        lastUpdated: true
     },
     //插件
     plugins: {
@@ -68,7 +70,6 @@ module.exports = {
         'flowchart': {},
         '@vuepress/back-to-top': {},
         "vuepress-plugin-cat": {},
-        '@dovyp/vuepress-plugin-clipboard-copy': {}
-
+        '@dovyp/vuepress-plugin-clipboard-copy': true
     }
 }
