@@ -1,5 +1,5 @@
 ---
-title: hadoop的http接口使用
+title: hadoop的webHttps接口的使用
 date: 2020-5-23
 tags:
   - hadoop
@@ -101,7 +101,7 @@ http://39.97.171.144:9870/webhdfs/v1/userrename?user.name=root&op=DELETE
 2. 再次发送一个请求:
    ```js
    let res1 = await axios({
-     method: "get",
+     method: "put",
      url: "http://39.97.171.144:9864/webhdfs/v1/user/hadoop/file1.txt",
      params: {
        "user.name": "root",
