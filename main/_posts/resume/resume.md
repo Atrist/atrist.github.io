@@ -26,17 +26,18 @@ github: [https://github.com/atrist](https://github.com/atrist)
 ## 掌握技能
 
 <br/>
-<level name="HTML"  :progress="80" />
+<level name="HTML"  :progress="80" status="success"/>
 
-<level name="PUG" :progress="56" />
+<level name="PUG" :progress="56" status="success"/>
+
 
 <level name="CSS" :progress="78" status="success"/>
 
 <level name="SCSS" :progress="72" status="success"/>
 
-<level name="JS" :progress="87" status="warning" />
+<level name="JS" :progress="87" status="success"/>
 
-<level name="Vue,Vue全家桶" :progress="75" status="warning"/>
+<level name="Vue,Vue全家桶" :progress="75" status="success"/>
 
 ### 其他技能点:
 
