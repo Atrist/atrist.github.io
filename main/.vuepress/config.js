@@ -3,6 +3,7 @@ module.exports = {
     title: 'Atrist',
     // 编译输出位置
     dest: './docs',
+    description: "Atrist's Blog",
     base: '/blog/',
     // blog主题
     theme: '@vuepress/theme-blog',
@@ -59,7 +60,7 @@ module.exports = {
             siteTitle: (_, $site) => $site.title,
             title: $page => $page.title,
             description: $page => $page.frontmatter.description,
-            author: (_, $site) => $site.themeConfig.author,
+            author: () => "Atrist",
             tags: $page => $page.frontmatter.tags,
             type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
             url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
@@ -70,6 +71,12 @@ module.exports = {
         'flowchart': {},
         '@vuepress/back-to-top': {},
         "vuepress-plugin-cat": {},
-        '@dovyp/vuepress-plugin-clipboard-copy': true
+        'vuepress-plugin-code-copy': {
+            successText: '复制成功'
+        },
+        'vuepress-plugin-baidu-autopush': {},
+        'sitemap': {
+            hostname: 'https://atrist.github.io'
+        }
     }
 }
