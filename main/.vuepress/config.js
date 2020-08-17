@@ -77,6 +77,11 @@ module.exports = {
         'vuepress-plugin-baidu-autopush': {},
         'sitemap': {
             hostname: 'https://atrist.github.io'
+        },
+        // markdown 支持 Tex 语法
+        'vuepress-plugin-mathjax':{
+            target:'svg'
         }
-    }
+    },
+
 }
