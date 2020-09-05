@@ -55,6 +55,5 @@ module.exports = {
 ![](./../images/2020-5-24-vuepress-githubPages.png)
 
 
-## 服务器
-
-待做
+## 借助`Travis CI`进行 自动化部署
+Travis文档

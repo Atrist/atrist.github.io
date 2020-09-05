@@ -8,5 +8,7 @@ export default ({
     siteData
 }) => {
     // 使用element-ui
-    Vue.use(ElementUI)
+    Vue.use(ElementUI);
+    // 将路由模式修改成 history
+    router.mode = 'history';
 }

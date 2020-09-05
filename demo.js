@@ -1,26 +1,26 @@
 /**
- * @param {number[]} digits
- * @return {number[]}
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
  */
-var plusOne = function (digits) {
+var moveZeroes = function (nums) {
 
+    let zeroFlag = 0;
+    for (let currentPoint = 0; currentPoint < nums.length; currentPoint++) {
 
-    // 拼接成字符串 转成数字  大树溢出
-    let digitsStr = BigInt((digits.join('')));
-    console.log(digitsStr)
-    // 加一
-    // digitsStr++;
-    digitsStr = digitsStr + 1n;
-    // 分割成字符串
-    return digitsStr.toString().split('');
-};
+        // 判断当前指针 元素是否 为 0
+        // 如果不为零
+        if (nums[currentPoint] !== 0) {
+            // 就跟 慢指针进行交换
+            let swap = nums[currentPoint];
+            nums[currentPoint] = nums[zeroFlag];
+            nums[zeroFlag] = swap;
+            zeroFlag++;
+        }
+    }
+    return nums;
+}
 
-let test = [1, 2, 3]
-console.log(plusOne(test))
-
-
-test = [4, 3, 2, 1]
-console.log(plusOne(test))
-
-test = [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]
-console.log(plusOne(test))
+let test = [0, 3, 0, 1, 12];
+console.log(moveZeroes(test));
+test = [0, 0, 1];
+console.log(moveZeroes(test));
