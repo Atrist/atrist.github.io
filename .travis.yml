@@ -1,0 +1,17 @@
+language: node_js
+# install默认值：npm install
+# script默认值：npm test
+node_js:
+  - node
+install:  
+  - npm ci
+script:
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  on:
+    branch: master 
