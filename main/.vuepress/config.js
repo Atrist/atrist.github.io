@@ -56,18 +56,6 @@ module.exports = {
             sidebarLinkSelector: '.sidebar-link',
             headerAnchorSelector: '.header-anchor'
         },
-        'seo': {
-            siteTitle: (_, $site) => $site.title,
-            title: $page => $page.title,
-            description: $page => $page.frontmatter.description,
-            author: () => "Atrist",
-            tags: $page => $page.frontmatter.tags,
-            type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
-            url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-            image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image),
-            publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
-            modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
-        }, // .vuepress/config.js
         'flowchart': {},
         '@vuepress/back-to-top': {},
         "vuepress-plugin-cat": {},
