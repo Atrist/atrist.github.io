@@ -14,10 +14,6 @@ npm install -g vuepress
 
 [ https://atrist.github.io/blog/](https://atrist.github.io/blog/)
 
-# 开始写作
+## 使用 travis ci 进行自动化部署
+只需要向 github commit 就可
 
-vuepress dev .
-
-# 构建静态文件
-
-vuepress build .
