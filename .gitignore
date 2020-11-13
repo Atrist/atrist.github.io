@@ -1,5 +1,4 @@
-# Dependency directories
+.DS_Store
 node_modules
-
-# 测试使用的js文件
+/dist
 demo.js
