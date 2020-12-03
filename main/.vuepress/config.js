@@ -67,8 +67,8 @@ module.exports = {
             hostname: 'https://atrist.github.io'
         },
         // markdown 支持 Tex 语法
-        'vuepress-plugin-mathjax':{
-            target:'svg'
+        '@maginapp/vuepress-plugin-katex':{
+            delimiters: 'dollars'
         }
     },
 
