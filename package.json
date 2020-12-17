@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Atrist/blog#readme",
   "devDependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
+    "@maginapp/vuepress-plugin-katex": "^1.0.7",
     "@vuepress/plugin-active-header-links": "^1.7.1",
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/theme-blog": "^2.3.3",
