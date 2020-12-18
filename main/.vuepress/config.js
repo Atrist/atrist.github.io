@@ -1,4 +1,4 @@
-const _ = require('loadsh')
+const _ = require('lodash')
 // .vuepress/config.js
 module.exports = {
     title: "Atrist",
