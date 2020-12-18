@@ -1,3 +1,4 @@
+const _ = require('loadsh')
 // .vuepress/config.js
 module.exports = {
     title: "Atrist",
