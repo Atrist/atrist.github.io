@@ -1,4 +1,4 @@
-const _ = require('lodash')
+const _ = require("lodash");
 // .vuepress/config.js
 module.exports = {
     title: "Atrist",
@@ -82,6 +82,7 @@ module.exports = {
             canonical_base: "https://atrist.github.io/blog/",
             sort: (entries) =>
                 _.orderBy(entries, (item) => item.frontmatter.date, "desc"),
+            image_sources: "https://i.loli.net/2020/12/18/RJ7AaB5YqSINV9b.jpg",
             count: 40,
         },
     },
