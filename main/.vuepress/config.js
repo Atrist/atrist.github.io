@@ -81,10 +81,15 @@ module.exports = {
     },
     feed: {
       canonical_base: "https://atrist.github.io/blog/",
-      sort: (entries) =>
-        _.orderBy(entries, (item) => item.frontmatter.date, "desc"),
+      sort: (entries) => {
+        return _.orderBy(
+          entries,
+          (item) => new Date(item.frontmatter.date),
+          "desc"
+        );
+      },
       image_sources: "https://i.loli.net/2020/12/18/RJ7AaB5YqSINV9b.jpg",
-      count: 40,
+      count: 100,
     },
   },
 };
