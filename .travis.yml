@@ -3,15 +3,15 @@ language: node_js
 # script默认值：npm test
 node_js:
   - node
-install:  
+install:
   - npm ci
 script:
-  - npm run build
+  - npm run docs:build
 deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
   github_token: $GITHUB_TOKEN
-  local_dir: docs/
+  local_dir: docs/.vitepress/dist
   on:
-    branch: master 
+    branch: main
