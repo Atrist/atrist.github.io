@@ -4,7 +4,7 @@ module.exports = {
   base: "/blog/",
   themeConfig: {
     nav: [
-      { text: "Front-End", link: "/Front", activeMatch: "^/$|^/Front/" },
+      { text: "Tech", link: "/Front/", activeMatch: "^/$|^/Front/" },
       {
         text: "Config Reference",
         link: "/config/basics",
@@ -35,29 +35,14 @@ module.exports = {
 function getFrontSidebar() {
   return [
     {
-      text: "HTML",
-      children: [
-        { text: "What is HTML?", link: "/Front/" },
-        { text: "Getting Started", link: "/Front/getting-started" },
-        { text: "Configuration", link: "/Front/configuration" },
-        { text: "Asset Handling", link: "/Front/assets" },
-        { text: "Markdown Extensions", link: "/Front/markdown" },
-        { text: "Using Vue in Markdown", link: "/Front/using-vue" },
-        { text: "Deploying", link: "/Front/deploy" },
-      ],
+      text: "前端",
+      children: getCommonSidebar(
+        ["HTML", "CSS", "JS", "Vue", "React"],
+        "/Front"
+      ),  
     },
     {
-      text: "Css",
-      children: [
-        { text: "Frontmatter", link: "/Front/frontmatter" },
-        { text: "Global Computed", link: "/Front/global-computed" },
-        { text: "Global Component", link: "/Front/global-component" },
-        { text: "Customization", link: "/Front/customization" },
-        {
-          text: "Differences from Vuepress",
-          link: "/Front/differences-from-vuepress",
-        },
-      ],
+      text: "算法与数据结构",
     },
   ];
 }
@@ -77,4 +62,15 @@ function getConfigSidebar() {
       ],
     },
   ];
+}
+
+function getCommonSidebar(catalogue, prefix) {
+  let res = [];
+  for (let i of catalogue) {
+    res.push({
+      text: i,
+      link: prefix + "/" + i,
+    });
+  }
+  return res;
 }
