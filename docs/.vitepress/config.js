@@ -1,76 +1,91 @@
+const fs = require('fs')
+
 module.exports = {
-  title: "AI",
+  title: 'AI',
   description: "AI's Blog",
-  base: "/blog/",
+  base: '/blog/',
   themeConfig: {
     nav: [
-      { text: "Tech", link: "/Front/", activeMatch: "^/$|^/Front/" },
+      { text: 'web', link: '/web/', activeMatch: '^/web/' },
       {
-        text: "Config Reference",
-        link: "/config/basics",
-        activeMatch: "^/config/",
-      },
-      {
-        text: "Release Notes",
-        link: "https://github.com/vuejs/vitepress/releases",
+        text: '算法',
+        link: '/leetcode/',
+        activeMatch: '^/leetcode/',
       },
     ],
-    algolia: {
-      apiKey: "123",
-      indexName: "index_name",
-    },
-    carbonAds: {
-      carbon: "your-carbon-key",
-      custom: "your-carbon-custom",
-      placement: "your-carbon-placement",
-    },
     sidebar: {
-      "/Front/": getFrontSidebar(),
-      "/config/": getConfigSidebar(),
-      "/": getFrontSidebar(),
+      '/web/': getWebSidebar(),
+      '/leetcode/': getLeetcodeSidebar(),
+      '/': getWebSidebar(),
     },
   },
-};
-
-function getFrontSidebar() {
-  return [
-    {
-      text: "前端",
-      children: getCommonSidebar(
-        ["HTML", "CSS", "JS", "Vue", "React"],
-        "/Front"
-      ),  
-    },
-    {
-      text: "算法与数据结构",
-    },
-  ];
 }
 
-function getConfigSidebar() {
+function getWebSidebar() {
   return [
     {
-      text: "App Config",
-      children: [{ text: "Basics", link: "/config/basics" }],
+      text: 'HTML',
     },
     {
-      text: "Theme Config",
-      children: [
-        { text: "Homepage", link: "/config/homepage" },
-        { text: "Algolia Search", link: "/config/algolia-search" },
-        { text: "Carbon Ads", link: "/config/carbon-ads" },
-      ],
+      text: 'CSS',
     },
-  ];
+    {
+      text: 'JAVASCRIPT',
+    },
+    {
+      text: 'REACT',
+    },
+  ]
 }
 
-function getCommonSidebar(catalogue, prefix) {
-  let res = [];
-  for (let i of catalogue) {
+function getLeetcodeSidebar() {
+  return [
+    {
+      text: '数据结构',
+      link: '/leetcode/dataStructure/',
+      children: getCommonSidebar('/leetcode/dataStructure/'),
+    },
+    {
+      text: '算法',
+      link: '/leetcode/algorithm/',
+      children: getCommonSidebar('/leetcode/algorithm/'),
+    },
+    {
+      text: '剑指Offer',
+      link: '/leetcode/offer/',
+      children: getCommonSidebar('/leetcode/offer/'),
+    },
+    {
+      text: '每日一题',
+      link: '/leetcode/dayOne/',
+      children: getCommonSidebar('/leetcode/dayOne', sort),
+    },
+  ]
+}
+
+/**
+ * 排序函数
+ */
+function sort(dir) {
+  const dirs = dir.map((item) => ({
+    item: item,
+    weight: parseInt(item.split('.')[0]),
+  }))
+  const res = dirs.sort((a, b) => a.weight - b.weight)
+  return res.map((item) => item.item)
+}
+
+function getCommonSidebar(path, sort) {
+  const filePath = './docs' + path
+  let dirs = fs.readdirSync(filePath)
+  if (sort && typeof sort === 'function') dirs = sort(dirs)
+  let res = []
+  for (let dir of dirs) {
+    if (dir === 'index.md') continue
     res.push({
-      text: i,
-      link: prefix + "/" + i,
-    });
+      text: dir.split('.md')[0],
+      link: path + dir.split('.md')[0],
+    })
   }
-  return res;
+  return res
 }
