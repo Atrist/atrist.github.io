@@ -25,6 +25,11 @@ function getWebSidebar() {
   return [
     {
       text: 'HTML',
+      link: '/web/html',
+      children: [
+        ...getCommonSidebar('/web/html/'),
+        ...getCommonSidebar('/web/html/body元素/'),
+      ],
     },
     {
       text: 'CSS',
@@ -58,7 +63,7 @@ function getLeetcodeSidebar() {
     {
       text: '每日一题',
       link: '/leetcode/dayOne/',
-      children: getCommonSidebar('/leetcode/dayOne', sort),
+      children: getCommonSidebar('/leetcode/dayOne/', sort),
     },
   ]
 }
@@ -78,6 +83,12 @@ function sort(dir) {
 function getCommonSidebar(path, sort) {
   const filePath = './docs' + path
   let dirs = fs.readdirSync(filePath)
+  let result = []
+  for (let dir of dirs) {
+    const stat = fs.lstatSync(filePath + dir)
+    if (stat.isFile()) result.push(dir)
+  }
+  dirs = result
   if (sort && typeof sort === 'function') dirs = sort(dirs)
   let res = []
   for (let dir of dirs) {

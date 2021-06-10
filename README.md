@@ -1,4 +1,4 @@
-## Goal
+## Motivation
 用于知识总结的归纳
 ## github Page 地址
 

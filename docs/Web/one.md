@@ -1,2 +1,0 @@
-:::tip
-hello world2
