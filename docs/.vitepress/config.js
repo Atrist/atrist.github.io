@@ -82,7 +82,7 @@ function sort(dir) {
 }
 
 function getCommonSidebar(filepath, sort) {
-  const filePath = path.join('docs', filepath)
+  const filePath = path.join(__dirname, '../', filepath)
   let dirs = fs.readdirSync(filePath)
   let result = []
   for (let dir of dirs) {
