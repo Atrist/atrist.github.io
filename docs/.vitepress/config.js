@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 module.exports = {
   title: 'AI',
@@ -80,8 +81,8 @@ function sort(dir) {
   return res.map((item) => item.item)
 }
 
-function getCommonSidebar(path, sort) {
-  const filePath = './docs' + path
+function getCommonSidebar(filepath, sort) {
+  const filePath = path.join('docs', filepath)
   let dirs = fs.readdirSync(filePath)
   let result = []
   for (let dir of dirs) {
@@ -95,7 +96,7 @@ function getCommonSidebar(path, sort) {
     if (dir === 'index.md') continue
     res.push({
       text: dir.split('.md')[0],
-      link: path + dir.split('.md')[0],
+      link: filepath + dir.split('.md')[0],
     })
   }
   return res
