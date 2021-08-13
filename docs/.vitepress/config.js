@@ -13,6 +13,13 @@ module.exports = {
         content: 'dmBwuwXMb8fdF5HD1TOPyGTFAQUzV9O9vN4Mh06slnY',
       },
     ],
+    [
+      'meta',
+      {
+        name: 'baidu-site-verification',
+        content: 'code-HK08p9tJHw',
+      },
+    ],
   ],
   themeConfig: {
     nav: [
