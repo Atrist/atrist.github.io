@@ -6,7 +6,7 @@
   "author": "atrist <atristmu@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^0.14.0"
+    "vitepress": "^0.16.1"
   },
   "scripts": {
     "dev": "vitepress dev docs",

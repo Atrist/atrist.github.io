@@ -1,15 +1,15 @@
 ---
 home: true
-heroText: Atrist'Blog
+heroText: Atrist
 tagline: The answer of the question
-actionText: Web
-actionLink: /web/
+actionText: know
+actionLink: /know/
 features:
-  - title: 前端
-    details: 前端技术的广度和深度，html, css, Js, Vue, React， 只要看得更多，才会有更多的办法。
-  - title: 算法
-    details: 只有攀登高山，才有一觉风光的机会。
-  - title: 读书笔记
-    details: 谋求一些独面自我的勇气
+  - title: 基础知识
+    details: 万丈高楼，平地起。
+  - title: 解决方案
+    details: 常规需求的解决方案集中
+  - title: 源码阅读
+    details: 优秀项目的构建和代码的学习
 footer: MIT Licensed | Copyright © 2021-present Atrist
 ---

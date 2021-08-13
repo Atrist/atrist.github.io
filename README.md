@@ -6,3 +6,6 @@
 
 ## 使用 travis ci 进行自动化部署
 只需要向 github commit 就可
+
+## 文件夹命令规范
+1. 小驼峰 aBbbCcc

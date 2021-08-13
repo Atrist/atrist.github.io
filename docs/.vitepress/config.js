@@ -5,35 +5,69 @@ module.exports = {
   title: 'AI',
   description: "AI's Blog",
   base: '/blog/',
+  head: [
+    [
+      'meta',
+      {
+        name: 'google-site-verification',
+        content: 'dmBwuwXMb8fdF5HD1TOPyGTFAQUzV9O9vN4Mh06slnY',
+      },
+    ],
+  ],
   themeConfig: {
     nav: [
-      { text: 'web', link: '/web/', activeMatch: '^/web/' },
+      { text: 'know', link: '/know/', activeMatch: '^/know/' },
       {
-        text: '算法',
-        link: '/leetcode/',
-        activeMatch: '^/leetcode/',
+        text: 'answer',
+        link: '/answer/',
+        activeMatch: '^/answer/',
       },
     ],
     sidebar: {
-      '/web/': getWebSidebar(),
+      '/know/': getKnowSidebar(),
       '/leetcode/': getLeetcodeSidebar(),
       '/': getWebSidebar(),
     },
   },
 }
 
+function getKnowSidebar() {
+  return [
+    {
+      text: '',
+      link: '/know/front/',
+      children: [
+        {
+          text: '前端',
+          link: '/know/front/',
+        },
+      ],
+    },
+    {
+      text: 'HTML',
+      link: '/know/front/html',
+      children: [...getSideBarByArray('/know/front/html/', ['基础', 'head'])],
+    },
+  ]
+}
 function getWebSidebar() {
   return [
     {
       text: 'HTML',
-      link: '/web/html',
+      link: '/web/html/',
       children: [
-        ...getCommonSidebar('/web/html/'),
-        ...getCommonSidebar('/web/html/body元素/'),
+        ...getSideBarByArray('/web/html/', ['基础', 'head']),
+        {
+          text: 'body',
+          link: '/web/html/body/',
+          children: getCommonSidebar('/web/html/body/'),
+        },
       ],
     },
     {
       text: 'CSS',
+      link: '/web/css/',
+      children: [...getSideBarByArray('/web/css/', ['选择器', '布局', '动画'])],
     },
     {
       text: 'JAVASCRIPT',
@@ -48,6 +82,7 @@ function getLeetcodeSidebar() {
   return [
     {
       text: '数据结构',
+
       link: '/leetcode/dataStructure/',
       children: getCommonSidebar('/leetcode/dataStructure/'),
     },
@@ -60,11 +95,6 @@ function getLeetcodeSidebar() {
       text: '剑指Offer',
       link: '/leetcode/offer/',
       children: getCommonSidebar('/leetcode/offer/'),
-    },
-    {
-      text: '每日一题',
-      link: '/leetcode/dayOne/',
-      children: getCommonSidebar('/leetcode/dayOne/', sort),
     },
   ]
 }
@@ -97,6 +127,18 @@ function getCommonSidebar(filepath, sort) {
     res.push({
       text: dir.split('.md')[0],
       link: filepath + dir.split('.md')[0],
+    })
+  }
+  return res
+}
+
+function getSideBarByArray(path, array) {
+  let res = []
+  if (!Array.isArray(array)) return []
+  for (let i of array) {
+    res.push({
+      text: i,
+      link: path + i,
     })
   }
   return res
