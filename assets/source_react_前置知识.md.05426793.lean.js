@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./app.999615b2.js";const r='{"title":"","description":"","frontmatter":{},"relativePath":"web/css/动画.md","lastUpdated":1623388632844}',a={};a.render=function(r,a,o,s,d,i){return t(),e("div")};export default a;export{r as __pageData};
