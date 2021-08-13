@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
   title: 'AI',
   description: "AI's Blog",
-  base: '/blog/',
+  base: '/',
   head: [
     [
       'meta',
