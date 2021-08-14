@@ -3,6 +3,7 @@ module.exports = {
   title: 'Atrist',
   description:
     '前端的基础知识集中, 相关业务场景的解决方案集中, 源码阅读过程中的一些感悟',
+  base: '/',
   head: [
     [
       'meta',
