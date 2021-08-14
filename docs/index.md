@@ -2,8 +2,9 @@
 home: true
 heroText: Atrist
 tagline: The answer of the question
-actionText: know
-actionLink: /know/
+actions:
+  - text: 前端基础
+    link: /know/
 features:
   - title: 基础知识
     details: 万丈高楼，平地起。

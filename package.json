@@ -6,12 +6,12 @@
   "author": "atrist <atristmu@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^0.16.1"
+    "vuepress": "^1.8.2"
   },
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "serve": "vuepress serve docs"
   },
   "dependencies": {
     "vuepress-plugin-sitemap": "^2.3.1"
