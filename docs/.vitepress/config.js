@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-
+const utils = require('./utils')
 module.exports = {
-  title: 'AI',
-  description: "AI's Blog",
+  title: 'Atrist',
+  description: "atrist's Blog, 用于记录前端学习和前端问题的个人博客",
   base: '/',
   head: [
     [
@@ -23,17 +23,39 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: 'know', link: '/know/', activeMatch: '^/know/' },
+      { text: '基础', link: '/know/', activeMatch: '^/know/' },
       {
-        text: 'answer',
+        text: '解决方案',
         link: '/answer/',
         activeMatch: '^/answer/',
+      },
+      {
+        text: '源码阅读',
+        link: '/code/',
+        activeMatch: '^/code/',
       },
     ],
     sidebar: {
       '/know/': getKnowSidebar(),
       '/leetcode/': getLeetcodeSidebar(),
-      '/': getWebSidebar(),
+      '/code/': [
+        {
+          text: 'vitepress',
+          link: '/code/vitepress/',
+          children: utils.fileList(
+            path.join(__dirname, '../', 'code/vitepress'),
+            '/code/vitepress/'
+          ),
+        },
+      ],
+      '/': getKnowSidebar(),
+    },
+  },
+  plugins: {
+    sitemap: {
+      hostname: 'https://www.atrist.github.io',
+      // 排除无实际内容的页面
+      exclude: ['/404.html'],
     },
   },
 }
@@ -149,4 +171,21 @@ function getSideBarByArray(path, array) {
     })
   }
   return res
+}
+
+function getCodeSidebar(root) {
+  let result = []
+  let queue = [root]
+  while (queue.length !== 0) {
+    let rootPath = queue.shift()
+    const files = fs.readdirSync(rootPath)
+    console.log(files)
+
+    for (let file of files) {
+      if (file === 'index.md') continue
+      if (utils.isFile(rootPath + '/' + file)) {
+      }
+    }
+  }
+  // 递归的进行对目录的变换
 }
