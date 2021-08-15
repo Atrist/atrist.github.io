@@ -6,7 +6,7 @@
   "author": "atrist <atristmu@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.24"
+    "vuepress": "^1.8.2"
   },
   "scripts": {
     "dev": "vuepress dev docs",
@@ -14,7 +14,6 @@
     "serve": "vuepress serve docs"
   },
   "dependencies": {
-    "esm": "^3.2.25",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
 }

@@ -21,7 +21,8 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    navbar: [
+    search: false,
+    nav: [
       { text: '前端基础', link: '/know/', activeMatch: '^/know/' },
       {
         text: '解决方案',
@@ -37,32 +38,43 @@ module.exports = {
     sidebar: {
       '/know/': [
         {
-          text: '前端',
+          title: '前端',
+          collapsable: false,
+          path: '/know/front/',
           children: [
             {
-              text: 'html',
-              link: '/know/front/html/',
+              title: 'HTML',
+              path: '/know/front/html/',
+              collapsable: false,
               children: [
                 {
-                  text: '基础',
-                  link: '/know/front/html/基础.md',
-                  sidebar: 'auto',
+                  title: '基础',
+                  path: '/know/front/html/基础.md',
                 },
                 {
-                  text: 'head',
-                  link: 'head.md',
+                  title: 'head',
+                  path: '/know/front/html/head.md',
                 },
               ],
             },
             {
-              text: 'css',
-              link: '/know/front/css/',
-              children: ['/know/front/css/基础.md'],
+              title: 'CSS',
+              collapsable: false,
+              path: '/know/front/css/',
+              children: [
+                {
+                  title: '基础',
+                  path: '/know/front/html/基础.md',
+                },
+                {
+                  title: 'head',
+                  path: '/know/front/html/head.md',
+                },
+              ],
             },
           ],
         },
       ],
-      '/answer/': [{ text: '前端', children: ['/know/front/html/基础.md'] }],
     },
   },
   plugins: [
