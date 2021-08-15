@@ -34,17 +34,43 @@ module.exports = {
         activeMatch: '^/code/',
       },
     ],
-    sidebar: [
-      {
-        text: '基础',
-        link: '/know/',
-        children: [{ text: 'HTML', link: '/know/front/html/基础.md' }],
-      },
-    ],
-  },
-  plugins: {
-    sitemap: {
-      hostname: 'https://atrist.github.io/',
+    sidebar: {
+      '/know/': [
+        {
+          text: '前端',
+          children: [
+            {
+              text: 'html',
+              link: '/know/front/html/',
+              children: [
+                {
+                  text: '基础',
+                  link: '/know/front/html/基础.md',
+                  sidebar: 'auto',
+                },
+                {
+                  text: 'head',
+                  link: 'head.md',
+                },
+              ],
+            },
+            {
+              text: 'css',
+              link: '/know/front/css/',
+              children: ['/know/front/css/基础.md'],
+            },
+          ],
+        },
+      ],
+      '/answer/': [{ text: '前端', children: ['/know/front/html/基础.md'] }],
     },
   },
+  plugins: [
+    [
+      'sitemap',
+      {
+        hostname: 'https://atrist.github.io/',
+      },
+    ],
+  ],
 }
