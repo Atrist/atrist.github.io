@@ -116,9 +116,8 @@ function getFilesByPath(filepath) {
   const files = fs.readdirSync(filePath)
   let res = []
   for (let file of files) {
-    console.log(file)
     if (file === 'index.md') continue
-    res.push(filepath+file)
+    res.push({ title: file.split('.md')[0], path: filepath + file })
   }
   return res;
 }
