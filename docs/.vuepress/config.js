@@ -48,32 +48,8 @@ module.exports = {
               title: 'HTML',
               path: '/know/front/html/',
               collapsable: false,
-              children: [
-                {
-                  title: '基础',
-                  path: '/know/front/html/基础.md',
-                },
-                {
-                  title: 'head',
-                  path: '/know/front/html/head.md',
-                },
-              ],
-            },
-            {
-              title: 'CSS',
-              collapsable: false,
-              path: '/know/front/css/',
-              children: [
-                {
-                  title: '基础',
-                  path: '/know/front/html/基础.md',
-                },
-                {
-                  title: 'head',
-                  path: '/know/front/html/head.md',
-                },
-              ],
-            },
+              children: getFilesByPath('/know/front/html/', true)
+            }
           ],
         },
       ],
@@ -91,6 +67,13 @@ module.exports = {
           children: getFilesByPath('/answer/offer/')
         }
       ],
+      '/code/': [
+        {
+          title: 'viepress',
+          path: "/code/vitepress/",
+          children: getFilesByPath('/code/vitepress/')
+        }
+      ]
     },
   },
   plugins: [
@@ -105,19 +88,32 @@ module.exports = {
         site: {
           name: 'Atrist',
         }
-    }]
+      }],
+    ['vuepress-plugin-baidu-autopush']
   ],
 }
 
 
-function getFilesByPath(filepath) {
+function getFilesByPath(filepath, sortFlag) {
   // 获取文件夹下面的目录
-  const filePath = path.join(__dirname,'../',filepath)
+  const filePath = path.join(__dirname, '../', filepath)
   const files = fs.readdirSync(filePath)
   let res = []
   for (let file of files) {
     if (file === 'index.md') continue
-    res.push({ title: file.split('.md')[0], path: filepath + file })
+    // 判断是否为文件夹
+    const fileStat = fs.statSync(path.join(filePath,file))
+    if(fileStat.isFile())
+      res.push({ title: file.split('.md')[0], path: filepath + file })
+    else continue
   }
+  if(sortFlag) return sort(res)
   return res;
+}
+function sort(data) {
+  data.sort((a, b) => {
+    parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0])
+  })
+  // 标题删除 排序数字
+  return data.map(item => ({ ...item,title: item.title.split('-')[1] }))
 }
