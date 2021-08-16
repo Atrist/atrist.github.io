@@ -6,7 +6,8 @@
   "author": "atrist <atristmu@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-autometa": "^0.1.13"
   },
   "scripts": {
     "dev": "vuepress dev docs",

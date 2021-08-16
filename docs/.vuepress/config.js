@@ -1,8 +1,10 @@
+const fs = require('fs')
+const path = require('path')
 module.exports = {
   lang: 'zh-CN',
   title: 'Atrist',
   description:
-    '前端的基础知识集中, 相关业务场景的解决方案集中, 源码阅读过程中的一些感悟',
+    '前端的基础知识集中, 相关业务场景的解决方案集中, 项目源码阅读过程中的一些感悟',
   base: '/',
   head: [
     [
@@ -75,6 +77,20 @@ module.exports = {
           ],
         },
       ],
+      '/answer/': [
+        {
+          title: '前端',
+          collapsable: false,
+          path: '/answer/web/',
+          children: ['/answer/web/拖拽.md']
+        }, 
+        {
+          title: '剑指offer',
+          collapsable: false,
+          path: '/answer/offer/',
+          children: getFilesByPath('/answer/offer/')
+        }
+      ],
     },
   },
   plugins: [
@@ -84,5 +100,25 @@ module.exports = {
         hostname: 'https://atrist.github.io/',
       },
     ],
+    [
+      'autometa', {
+        site: {
+          name: 'Atrist',
+        }
+    }]
   ],
+}
+
+
+function getFilesByPath(filepath) {
+  // 获取文件夹下面的目录
+  const filePath = path.join(__dirname,'../',filepath)
+  const files = fs.readdirSync(filePath)
+  let res = []
+  for (let file of files) {
+    console.log(file)
+    if (file === 'index.md') continue
+    res.push(filepath+file)
+  }
+  return res;
 }

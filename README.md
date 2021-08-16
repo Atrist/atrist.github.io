@@ -1,8 +1,7 @@
 ## Motivation
-用于知识总结的归纳
+个人博客文章的集中地, 由vuepress1.x支持.
 ## github Page 地址
-
-[ https://atrist.github.io/blog/](https://atrist.github.io/blog/)
+[https://atrist.github.io/](https://atrist.github.io)
 
 ## 使用 travis ci 进行自动化部署
 只需要向 github commit 就可
