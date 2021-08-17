@@ -71,6 +71,12 @@ module.exports = {
           collapsable: false,
           path: '/answer/business/',
           children: getFilesByPath('/answer/business/')
+        },
+        {
+          ttile: '面试',
+          collapsable: false,
+          path: '/answer/interview/',
+          children:getFilesByPath('/answer/interview/')
         }
       ],
       '/code/': [
