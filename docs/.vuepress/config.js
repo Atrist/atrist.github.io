@@ -25,7 +25,14 @@ module.exports = {
   themeConfig: {
     search: false,
     nav: [
-      { text: '前端基础', link: '/know/', activeMatch: '^/know/' },
+      {
+        text: '基础知识',
+        ariaLabel: '基础知识',
+        items: [
+          { text: '前端', link: '/know/front/' },
+          { text: '算法', link: '/know/algorithm/' },
+        ],
+      },
       {
         text: '解决方案',
         link: '/answer/',
@@ -38,19 +45,20 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/know/': [
+      '/know/front/': [
         {
-          title: '前端',
+          title: 'HTML',
+          path: '/know/front/html/',
           collapsable: false,
-          path: '/know/front/',
-          children: [
-            {
-              title: 'HTML',
-              path: '/know/front/html/',
-              collapsable: false,
-              children: getFilesByPath('/know/front/html/', true)
-            }
-          ],
+          children: getFilesByPath('/know/front/html/', true),
+        },
+      ],
+      '/know/algorithm/': [
+        {
+          title: '算法',
+          path: '/know/algorithm/',
+          collapsable: false,
+          children: getFilesByPath('/know/algorithm/'),
         },
       ],
       '/answer/': [
@@ -58,34 +66,34 @@ module.exports = {
           title: '前端',
           collapsable: false,
           path: '/answer/web/',
-          children: ['/answer/web/拖拽.md']
-        }, 
+          children: ['/answer/web/拖拽.md'],
+        },
         {
           title: '剑指offer',
           collapsable: false,
           path: '/answer/offer/',
-          children: getFilesByPath('/answer/offer/')
+          children: getFilesByPath('/answer/offer/'),
         },
         {
           title: '业务',
           collapsable: false,
           path: '/answer/business/',
-          children: getFilesByPath('/answer/business/')
+          children: getFilesByPath('/answer/business/'),
         },
         {
           ttile: '面试',
           collapsable: false,
           path: '/answer/interview/',
-          children:getFilesByPath('/answer/interview/')
-        }
+          children: getFilesByPath('/answer/interview/'),
+        },
       ],
       '/code/': [
         {
           title: 'viepress',
-          path: "/code/vitepress/",
-          children: getFilesByPath('/code/vitepress/')
-        }
-      ]
+          path: '/code/vitepress/',
+          children: getFilesByPath('/code/vitepress/'),
+        },
+      ],
     },
   },
   plugins: [
@@ -96,15 +104,16 @@ module.exports = {
       },
     ],
     [
-      'autometa', {
+      'autometa',
+      {
         site: {
           name: 'Atrist',
-        }
-      }],
-    ['vuepress-plugin-baidu-autopush']
+        },
+      },
+    ],
+    ['vuepress-plugin-baidu-autopush'],
   ],
 }
-
 
 function getFilesByPath(filepath, sortFlag) {
   // 获取文件夹下面的目录
@@ -114,18 +123,18 @@ function getFilesByPath(filepath, sortFlag) {
   for (let file of files) {
     if (file === 'index.md') continue
     // 判断是否为文件夹
-    const fileStat = fs.statSync(path.join(filePath,file))
-    if(fileStat.isFile())
+    const fileStat = fs.statSync(path.join(filePath, file))
+    if (fileStat.isFile())
       res.push({ title: file.split('.md')[0], path: filepath + file })
     else continue
   }
-  if(sortFlag) return sort(res)
-  return res;
+  if (sortFlag) return sort(res)
+  return res
 }
 function sort(data) {
   data.sort((a, b) => {
     parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0])
   })
   // 标题删除 排序数字
-  return data.map(item => ({ ...item,title: item.title.split('-')[1] }))
+  return data.map((item) => ({ ...item, title: item.title.split('-')[1] }))
 }
