@@ -29,8 +29,19 @@ module.exports = {
         text: '基础知识',
         ariaLabel: '基础知识',
         items: [
-          { text: '前端', link: '/know/front/', items: [{text:'HTML',link:'/know/front/html/'},{text:'CSS',link:'/know/front/css/'}] },
-          { text: '工具', link: '/know/tool/', items: [{ text: 'git', link: '/know/tool/git/' }] },
+          {
+            text: '前端',
+            link: '/know/front/',
+            items: [
+              { text: 'HTML', link: '/know/front/html/' },
+              { text: 'CSS', link: '/know/front/css/' },
+            ],
+          },
+          {
+            text: '工具',
+            link: '/know/tool/',
+            items: [{ text: 'git', link: '/know/tool/git/' }],
+          },
           { text: '算法', link: '/know/algorithm/' },
         ],
       },
@@ -47,8 +58,8 @@ module.exports = {
       {
         text: '项目集成',
         link: '/workshop/',
-        items: [{text:'Cli', link: '/workshop/cli/'}]
-      }
+        items: [{ text: 'Cli', link: '/workshop/cli/' }],
+      },
     ],
     sidebar: {
       '/know/front/': [
@@ -62,8 +73,8 @@ module.exports = {
           title: 'CSS',
           path: '/know/front/css/',
           collapsable: false,
-          children: getFilesByPath('/know/front/css/', true)
-        }
+          children: getFilesByPath('/know/front/css/', true),
+        },
       ],
       '/know/algorithm/': [
         {
@@ -78,8 +89,8 @@ module.exports = {
           title: 'Git',
           path: '/know/tool/git/',
           collapsable: false,
-          children: getFilesByPath('/know/tool/git/', true)
-        }
+          children: getFilesByPath('/know/tool/git/', true),
+        },
       ],
       '/answer/': [
         {
@@ -112,8 +123,8 @@ module.exports = {
           title: 'cli',
           collapsable: false,
           path: '/workshop/cli/',
-          children: getFilesByPath('/workshop/cli/', true)
-        }
+          children: getFilesByPath('/workshop/cli/', true),
+        },
       ],
       '/code/': [
         {
@@ -143,10 +154,11 @@ module.exports = {
     ['seo'],
     ['code-copy'],
     [
-      'feed', {
+      'feed',
+      {
         canonical_base: 'https://atrist.github.io',
-      }
-    ]
+      },
+    ],
   ],
 }
 
@@ -163,7 +175,7 @@ function getFilesByPath(filepath, sortFlag) {
       res.push({ title: file.split('.md')[0], path: filepath + file })
     else continue
   }
-  return sortFlag?sort(res):res
+  return sortFlag ? sort(res) : res
 }
 function sort(data) {
   data.sort((a, b) => {
