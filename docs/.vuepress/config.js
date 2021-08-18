@@ -29,7 +29,8 @@ module.exports = {
         text: '基础知识',
         ariaLabel: '基础知识',
         items: [
-          { text: '前端', link: '/know/front/' },
+          { text: '前端', link: '/know/front/', items: [{text:'HTML',link:'/know/front/html/'},{text:'CSS',link:'/know/front/css/'}] },
+          { text: '工具', link: '/know/tool/', items: [{ text: 'git', link: '/know/tool/git/' }] },
           { text: '算法', link: '/know/algorithm/' },
         ],
       },
@@ -43,6 +44,11 @@ module.exports = {
         link: '/code/',
         activeMatch: '^/code/',
       },
+      {
+        text: '项目集成',
+        link: '/workshop/',
+        items: [{text:'Cli', link: '/workshop/cli/'}]
+      }
     ],
     sidebar: {
       '/know/front/': [
@@ -52,6 +58,12 @@ module.exports = {
           collapsable: false,
           children: getFilesByPath('/know/front/html/', true),
         },
+        {
+          title: 'CSS',
+          path: '/know/front/css/',
+          collapsable: false,
+          chidlren: getFilesByPath('/know/front/css/', true)
+        }
       ],
       '/know/algorithm/': [
         {
@@ -60,6 +72,14 @@ module.exports = {
           collapsable: false,
           children: getFilesByPath('/know/algorithm/'),
         },
+      ],
+      '/know/tool/': [
+        {
+          title: 'Git',
+          path: '/know/tool/git/',
+          collapsable: false,
+          children: getFilesByPath('/know/tool/git/', true)
+        }
       ],
       '/answer/': [
         {
@@ -81,11 +101,19 @@ module.exports = {
           children: getFilesByPath('/answer/business/'),
         },
         {
-          ttile: '面试',
+          title: '面试',
           collapsable: false,
           path: '/answer/interview/',
           children: getFilesByPath('/answer/interview/'),
         },
+      ],
+      '/workshop/': [
+        {
+          title: 'cli',
+          collapsable: false,
+          path: '/workshop/cli/',
+          children: getFilesByPath('/workshop/cli/', true)
+        }
       ],
       '/code/': [
         {
