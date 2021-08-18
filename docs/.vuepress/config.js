@@ -62,7 +62,7 @@ module.exports = {
           title: 'CSS',
           path: '/know/front/css/',
           collapsable: false,
-          chidlren: getFilesByPath('/know/front/css/', true)
+          children: getFilesByPath('/know/front/css/', true)
         }
       ],
       '/know/algorithm/': [
@@ -139,7 +139,14 @@ module.exports = {
         },
       },
     ],
-    ['vuepress-plugin-baidu-autopush'],
+    ['baidu-autopush'],
+    ['seo'],
+    ['code-copy'],
+    [
+      'feed', {
+        canonical_base: 'https://atrist.github.io',
+      }
+    ]
   ],
 }
 
@@ -156,8 +163,7 @@ function getFilesByPath(filepath, sortFlag) {
       res.push({ title: file.split('.md')[0], path: filepath + file })
     else continue
   }
-  if (sortFlag) return sort(res)
-  return res
+  return sortFlag?sort(res):res
 }
 function sort(data) {
   data.sort((a, b) => {
