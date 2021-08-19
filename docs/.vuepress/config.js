@@ -35,10 +35,14 @@ module.exports = {
             items: [
               { text: 'HTML', link: '/know/front/html/' },
               { text: 'CSS', link: '/know/front/css/' },
-              { text: 'Javascript', link: '/know/front/javascript/'}
+              { text: 'Javascript', link: '/know/front/javascript/' },
             ],
           },
-          { text: '后端', link: '/know/back/', items: [{ text: 'NodeJs', link:'/know/back/nodejs/'}]},
+          {
+            text: '后端',
+            link: '/know/back/',
+            items: [{ text: 'NodeJs', link: '/know/back/nodejs/' }],
+          },
           {
             text: '工具',
             link: '/know/tool/',
@@ -58,13 +62,13 @@ module.exports = {
         items: [
           {
             text: 'vitepress',
-            link:'/code/vitepress/'
+            link: '/code/vitepress/',
           },
           {
             text: 'npm包',
-            link: '/code/npm/'
-          }
-        ]
+            link: '/code/npm/',
+          },
+        ],
       },
       {
         text: '项目集成',
@@ -90,16 +94,16 @@ module.exports = {
           title: 'Javascript',
           path: '/know/front/javascript/',
           collapsable: false,
-          children: getFilesByPath('/know/front/javascript/', true)
-        }
+          children: getFilesByPath('/know/front/javascript/', true),
+        },
       ],
       '/know/back/': [
         {
           title: 'NodeJs',
           path: '/know/back/nodejs/',
           collapsable: false,
-          children: getFilesByPath('/know/back/nodejs/', true)
-        }
+          children: getFilesByPath('/know/back/nodejs/', true),
+        },
       ],
       '/know/algorithm/': [
         {
@@ -162,8 +166,9 @@ module.exports = {
           title: 'NPM包',
           path: '/code/npm/',
           collapsable: false,
+          sidebarDepth: 2,
           children: getFilesByPath('/code/npm/', true),
-        }
+        },
       ],
     },
   },
@@ -184,7 +189,7 @@ module.exports = {
     ],
     ['baidu-autopush'],
     ['seo'],
-    ['code-copy']
+    ['code-copy'],
   ],
 }
 

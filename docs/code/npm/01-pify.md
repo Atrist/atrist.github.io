@@ -6,7 +6,7 @@ npm包地址: [https://www.npmjs.com/package/pify](https://www.npmjs.com/package
 返回所提供函数或模块的 `Promise` 包装版本。
 
 ## 源码
-### tag v1.0.0
+### Tag v1.0.0
 ```js
 'use strict';
 module.exports = function (fn, P) {
@@ -36,3 +36,7 @@ module.exports = function (fn, P) {
 	};
 };
 ```
+这一次的源码, 基础知识点
+1. call, apply 函数的使用
+2. promise
+
