@@ -10,7 +10,6 @@
     "vuepress-plugin-autometa": "^0.1.13",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-feed": "^0.1.9",
     "vuepress-plugin-seo": "^0.1.4"
   },
   "scripts": {

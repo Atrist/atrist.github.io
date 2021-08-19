@@ -5,9 +5,10 @@
 实现功能列表
 
 ## 功能列表
-1. 可全局安装
-1. 命令行列表问询
-2. 创建一个模板文件
+1. 支持全局安装
+2. 支持参数输入
+3. 根据参数具备对应功能
 
 ## 参考列表
 1. [vue-cli](https://github.com/vuejs/vue-cli)
+2. [download-cli](https://github.com/kevva/download-cli)
