@@ -36,6 +36,7 @@ module.exports = {
               { text: 'HTML', link: '/know/front/html/' },
               { text: 'CSS', link: '/know/front/css/' },
               { text: 'Javascript', link: '/know/front/javascript/' },
+              { text: '网络', link: '/know/front/network/' },
             ],
           },
           {
@@ -46,9 +47,15 @@ module.exports = {
           {
             text: '工具',
             link: '/know/tool/',
-            items: [{ text: 'git', link: '/know/tool/git/' }],
+            items: [{ text: 'git', link: '/know/tool/git/' } , { text: 'vscode', link: '/know/tool/vscode/'}],
           },
-          { text: '算法', link: '/know/algorithm/' },
+          {
+            text: '算法与数据结构', link: '/know/algorithm/',
+            items: [
+              { text: '算法', link: '/know/algorithm/algorithm/' },
+              { text: '数据结构', link: '/know/algorithm/data/' }
+            ]
+          },
         ],
       },
       {
@@ -77,50 +84,10 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/know/front/': [
-        {
-          title: 'HTML',
-          path: '/know/front/html/',
-          collapsable: false,
-          children: getFilesByPath('/know/front/html/', true),
-        },
-        {
-          title: 'CSS',
-          path: '/know/front/css/',
-          collapsable: false,
-          children: getFilesByPath('/know/front/css/', true),
-        },
-        {
-          title: 'Javascript',
-          path: '/know/front/javascript/',
-          collapsable: false,
-          children: getFilesByPath('/know/front/javascript/', true),
-        },
-      ],
-      '/know/back/': [
-        {
-          title: 'NodeJs',
-          path: '/know/back/nodejs/',
-          collapsable: false,
-          children: getFilesByPath('/know/back/nodejs/', true),
-        },
-      ],
-      '/know/algorithm/': [
-        {
-          title: '算法',
-          path: '/know/algorithm/',
-          collapsable: false,
-          children: getFilesByPath('/know/algorithm/'),
-        },
-      ],
-      '/know/tool/': [
-        {
-          title: 'Git',
-          path: '/know/tool/git/',
-          collapsable: false,
-          children: getFilesByPath('/know/tool/git/', true),
-        },
-      ],
+      '/know/front/': addCommonConfig([['HTML', '/know/front/html/'], ['CSS', '/know/front/css/'], ['Javascript', '/know/front/javascript/'], ['网络','/know/front/network/']]),
+      '/know/back/': addCommonConfig([['NodeJs', '/know/back/nodejs/']]),
+      '/know/algorithm/': addCommonConfig([['算法','/know/algorithm/algorithm/'], ['数据结构','/know/algorithm/data/']]),
+      '/know/tool/': addCommonConfig([['Git','/know/tool/git/'], ['Vscode', '/know/tool/vscode/']]),
       '/answer/': [
         {
           title: '前端',
@@ -147,14 +114,7 @@ module.exports = {
           children: getFilesByPath('/answer/interview/'),
         },
       ],
-      '/workshop/': [
-        {
-          title: 'cli',
-          collapsable: false,
-          path: '/workshop/cli/',
-          children: getFilesByPath('/workshop/cli/', true),
-        },
-      ],
+      '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/': [
         {
           title: 'viepress',
@@ -167,7 +127,7 @@ module.exports = {
           path: '/code/npm/',
           collapsable: false,
           sidebarDepth: 2,
-          children: getFilesByPath('/code/npm/', true),
+          children: getFilesByPath('/code/npm/'),
         },
       ],
     },
@@ -189,7 +149,7 @@ module.exports = {
     ],
     ['baidu-autopush'],
     ['seo'],
-    ['code-copy'],
+    ['@xiaopanda/vuepress-plugin-code-copy']
   ],
 }
 
@@ -206,12 +166,32 @@ function getFilesByPath(filepath, sortFlag) {
       res.push({ title: file.split('.md')[0], path: filepath + file })
     else continue
   }
-  return sortFlag ? sort(res) : res
+  return sort(res)
 }
 function sort(data) {
   data.sort((a, b) => {
     parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0])
   })
   // 标题删除 排序数字
-  return data.map((item) => ({ ...item, title: item.title.split('-')[1] }))
+  return data.map((item) => ({ ...item, title: item.title.split('-')[1]?item.title.split('-')[1]:item.title }))
+}
+
+
+/**
+ * 
+ * @param [] Array 二维数组 0 标题 1 路径
+ * @returns 对象数组
+ */
+function addCommonConfig(array) {
+  let result = []
+  for (let item of array) {
+    result.push({
+      title: item[0],
+      collapsable: false,
+      sidebarDepth: 2,
+      path: item[1],
+      children: getFilesByPath(item[1]),
+    })
+  }
+  return result
 }
