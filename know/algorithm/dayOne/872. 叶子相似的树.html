@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>叶子相似的树 | Atrist</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。">
+    <meta name="image" content="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png">
+    <meta name="twitter:title" content="叶子相似的树">
+    <meta name="twitter:description" content="请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="叶子相似的树">
+    <meta property="og:description" content="请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。">
+    <meta property="og:image" content="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png">
+    <meta property="og:site_name" content="Atrist">
+    <meta itemprop="name" content="叶子相似的树">
+    <meta itemprop="description" content="请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。">
+    <meta itemprop="image" content="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png">
+    <meta property="og:url" content="/know/algorithm/dayOne/872.%20%E5%8F%B6%E5%AD%90%E7%9B%B8%E4%BC%BC%E7%9A%84%E6%A0%91.html">
+    <meta name="twitter:url" content="/know/algorithm/dayOne/872.%20%E5%8F%B6%E5%AD%90%E7%9B%B8%E4%BC%BC%E7%9A%84%E6%A0%91.html">
+    <meta name="google-site-verification" content="dmBwuwXMb8fdF5HD1TOPyGTFAQUzV9O9vN4Mh06slnY">
+    <meta name="baidu-site-verification" content="code-HK08p9tJHw">
+    
+    <link rel="preload" href="/assets/css/0.styles.6cc24ef6.css" as="style"><link rel="preload" href="/assets/js/app.a252eea2.js" as="script"><link rel="preload" href="/assets/js/2.9b5bef0b.js" as="script"><link rel="preload" href="/assets/js/60.66293951.js" as="script"><link rel="prefetch" href="/assets/js/10.b05993b6.js"><link rel="prefetch" href="/assets/js/100.475b25e7.js"><link rel="prefetch" href="/assets/js/101.cdab1548.js"><link rel="prefetch" href="/assets/js/11.8fb9d301.js"><link rel="prefetch" href="/assets/js/12.4dff43fa.js"><link rel="prefetch" href="/assets/js/13.d5e09401.js"><link rel="prefetch" href="/assets/js/14.36109001.js"><link rel="prefetch" href="/assets/js/15.0b077525.js"><link rel="prefetch" href="/assets/js/16.f8e221ce.js"><link rel="prefetch" href="/assets/js/17.ef3d2916.js"><link rel="prefetch" href="/assets/js/18.89bdeaf3.js"><link rel="prefetch" href="/assets/js/19.536b0ab3.js"><link rel="prefetch" href="/assets/js/20.df117285.js"><link rel="prefetch" href="/assets/js/21.aa384a0a.js"><link rel="prefetch" href="/assets/js/22.1c83364b.js"><link rel="prefetch" href="/assets/js/23.d6563180.js"><link rel="prefetch" href="/assets/js/24.bbb99669.js"><link rel="prefetch" href="/assets/js/25.7908b8ed.js"><link rel="prefetch" href="/assets/js/26.6da716ce.js"><link rel="prefetch" href="/assets/js/27.779266d3.js"><link rel="prefetch" href="/assets/js/28.7625055a.js"><link rel="prefetch" href="/assets/js/29.c21467c4.js"><link rel="prefetch" href="/assets/js/3.95f32f58.js"><link rel="prefetch" href="/assets/js/30.297ebf34.js"><link rel="prefetch" href="/assets/js/31.f215334d.js"><link rel="prefetch" href="/assets/js/32.00e53085.js"><link rel="prefetch" href="/assets/js/33.8f3b5987.js"><link rel="prefetch" href="/assets/js/34.35bb9c40.js"><link rel="prefetch" href="/assets/js/35.d3193e80.js"><link rel="prefetch" href="/assets/js/36.5e7c9c5a.js"><link rel="prefetch" href="/assets/js/37.7c2ddc4a.js"><link rel="prefetch" href="/assets/js/38.f76a4082.js"><link rel="prefetch" href="/assets/js/39.8260ba81.js"><link rel="prefetch" href="/assets/js/4.f739cf4f.js"><link rel="prefetch" href="/assets/js/40.3e740901.js"><link rel="prefetch" href="/assets/js/41.f57c2ec1.js"><link rel="prefetch" href="/assets/js/42.dd202092.js"><link rel="prefetch" href="/assets/js/43.f1ae394f.js"><link rel="prefetch" href="/assets/js/44.2a2f3e0d.js"><link rel="prefetch" href="/assets/js/45.580777b0.js"><link rel="prefetch" href="/assets/js/46.829cc293.js"><link rel="prefetch" href="/assets/js/47.bd770344.js"><link rel="prefetch" href="/assets/js/48.6c8d3698.js"><link rel="prefetch" href="/assets/js/49.25d3e827.js"><link rel="prefetch" href="/assets/js/5.d8075059.js"><link rel="prefetch" href="/assets/js/50.1b4224d4.js"><link rel="prefetch" href="/assets/js/51.e2879718.js"><link rel="prefetch" href="/assets/js/52.6c15d94e.js"><link rel="prefetch" href="/assets/js/53.dbd353fa.js"><link rel="prefetch" href="/assets/js/54.f0447c9d.js"><link rel="prefetch" href="/assets/js/55.e7945402.js"><link rel="prefetch" href="/assets/js/56.0e7ec33e.js"><link rel="prefetch" href="/assets/js/57.1a77e7fe.js"><link rel="prefetch" href="/assets/js/58.9f1cf455.js"><link rel="prefetch" href="/assets/js/59.2d81c632.js"><link rel="prefetch" href="/assets/js/6.dbe996ed.js"><link rel="prefetch" href="/assets/js/61.0ae8c9d1.js"><link rel="prefetch" href="/assets/js/62.d64fb40d.js"><link rel="prefetch" href="/assets/js/63.d8dd7ba1.js"><link rel="prefetch" href="/assets/js/64.0ca0d3fa.js"><link rel="prefetch" href="/assets/js/65.36e9d50a.js"><link rel="prefetch" href="/assets/js/66.507e242e.js"><link rel="prefetch" href="/assets/js/67.12236b0e.js"><link rel="prefetch" href="/assets/js/68.91e36e7f.js"><link rel="prefetch" href="/assets/js/69.860474be.js"><link rel="prefetch" href="/assets/js/7.1c5ad34f.js"><link rel="prefetch" href="/assets/js/70.b0465a6d.js"><link rel="prefetch" href="/assets/js/71.765f48d9.js"><link rel="prefetch" href="/assets/js/72.58685ae9.js"><link rel="prefetch" href="/assets/js/73.7f78b9db.js"><link rel="prefetch" href="/assets/js/74.2663ada5.js"><link rel="prefetch" href="/assets/js/75.0731e5af.js"><link rel="prefetch" href="/assets/js/76.49759049.js"><link rel="prefetch" href="/assets/js/77.1a6d24f9.js"><link rel="prefetch" href="/assets/js/78.f3501771.js"><link rel="prefetch" href="/assets/js/79.0d7050f8.js"><link rel="prefetch" href="/assets/js/8.3bf44d0a.js"><link rel="prefetch" href="/assets/js/80.460d1017.js"><link rel="prefetch" href="/assets/js/81.ae95ed4f.js"><link rel="prefetch" href="/assets/js/82.48a02c97.js"><link rel="prefetch" href="/assets/js/83.6db63151.js"><link rel="prefetch" href="/assets/js/84.cd990bff.js"><link rel="prefetch" href="/assets/js/85.bdee28ae.js"><link rel="prefetch" href="/assets/js/86.6b01cf95.js"><link rel="prefetch" href="/assets/js/87.01066028.js"><link rel="prefetch" href="/assets/js/88.25838f9f.js"><link rel="prefetch" href="/assets/js/89.be0ae984.js"><link rel="prefetch" href="/assets/js/9.ca3ae3ee.js"><link rel="prefetch" href="/assets/js/90.af4716e0.js"><link rel="prefetch" href="/assets/js/91.14274e21.js"><link rel="prefetch" href="/assets/js/92.2b07716b.js"><link rel="prefetch" href="/assets/js/93.e4f0e56f.js"><link rel="prefetch" href="/assets/js/94.4520799d.js"><link rel="prefetch" href="/assets/js/95.a94e5ee7.js"><link rel="prefetch" href="/assets/js/96.9cec6dc0.js"><link rel="prefetch" href="/assets/js/97.1adc9e13.js"><link rel="prefetch" href="/assets/js/98.8064ad02.js"><link rel="prefetch" href="/assets/js/99.f9c92752.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6cc24ef6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Atrist</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/front/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/know/front/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/know/front/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/know/front/network/" class="nav-link">
+  网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/back/nodejs/" class="nav-link">
+  NodeJs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-subitem"><a href="/know/tool/vscode/" class="nav-link">
+  vscode
+</a></li></ul></li><li class="dropdown-item"><h4>
+          算法与数据结构
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/algorithm/algorithm/" class="nav-link">
+  算法
+</a></li><li class="dropdown-subitem"><a href="/know/algorithm/data/" class="nav-link">
+  数据结构
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/answer/" class="nav-link">
+  解决方案
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码阅读" class="dropdown-title"><span class="title">源码阅读</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码阅读" class="mobile-dropdown-title"><span class="title">源码阅读</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code/vitepress/" class="nav-link">
+  vitepress
+</a></li><li class="dropdown-item"><!----> <a href="/code/npm/" class="nav-link">
+  npm包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目集成" class="dropdown-title"><span class="title">项目集成</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目集成" class="mobile-dropdown-title"><span class="title">项目集成</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/workshop/cli/" class="nav-link">
+  Cli
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/front/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/know/front/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/know/front/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/know/front/network/" class="nav-link">
+  网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/back/nodejs/" class="nav-link">
+  NodeJs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-subitem"><a href="/know/tool/vscode/" class="nav-link">
+  vscode
+</a></li></ul></li><li class="dropdown-item"><h4>
+          算法与数据结构
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/algorithm/algorithm/" class="nav-link">
+  算法
+</a></li><li class="dropdown-subitem"><a href="/know/algorithm/data/" class="nav-link">
+  数据结构
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/answer/" class="nav-link">
+  解决方案
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码阅读" class="dropdown-title"><span class="title">源码阅读</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码阅读" class="mobile-dropdown-title"><span class="title">源码阅读</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code/vitepress/" class="nav-link">
+  vitepress
+</a></li><li class="dropdown-item"><!----> <a href="/code/npm/" class="nav-link">
+  npm包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目集成" class="dropdown-title"><span class="title">项目集成</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目集成" class="mobile-dropdown-title"><span class="title">项目集成</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/workshop/cli/" class="nav-link">
+  Cli
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/know/algorithm/algorithm/" class="sidebar-heading clickable open"><span>算法</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/know/algorithm/algorithm/01-多选投票算法.html" class="sidebar-link">多选投票算法</a></li><li><a href="/know/algorithm/algorithm/02-二叉树的各种遍历.html" class="sidebar-link">二叉树的各种遍历</a></li><li><a href="/know/algorithm/algorithm/03-位运算.html" class="sidebar-link">位运算</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/know/algorithm/data/" class="sidebar-heading clickable"><span>数据结构</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/know/algorithm/data/01-队列.html" class="sidebar-link">队列</a></li><li><a href="/know/algorithm/data/02-二叉树.html" class="sidebar-link">二叉树</a></li><li><a href="/know/algorithm/data/03-链表.html" class="sidebar-link">链表</a></li><li><a href="/know/algorithm/data/04-树.html" class="sidebar-link">树</a></li><li><a href="/know/algorithm/data/05-栈.html" class="sidebar-link">栈</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="叶子相似的树"><a href="#叶子相似的树" class="header-anchor">#</a> 叶子相似的树</h2> <p>请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。</p> <p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png" alt=""></p> <p>举个例子，如上图所示，给定一棵叶值序列为 <code>(6, 7, 4, 9, 8)</code> 的树。</p> <p>如果有两棵二叉树的叶值序列是相同，那么我们就认为它们是 <strong>叶相似</strong> 的。</p> <p>如果给定的两个根结点分别为 root1 和 root2 的树是叶相似的，则返回 true；否则返回 false 。</p> <h3 id="示例-1"><a href="#示例-1" class="header-anchor">#</a> 示例 1：</h3> <p><img src="https://assets.leetcode.com/uploads/2020/09/03/leaf-similar-1.jpg" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
+输出：true
+</code></pre></div><h3 id="示例-2"><a href="#示例-2" class="header-anchor">#</a> 示例 2：</h3> <div class="language- extra-class"><pre class="language-text"><code>输入：root1 = [1], root2 = [1]
+输出：true
+</code></pre></div><h3 id="示例-3"><a href="#示例-3" class="header-anchor">#</a> 示例 3：</h3> <div class="language- extra-class"><pre class="language-text"><code>输入：root1 = [1], root2 = [2]
+输出：false
+</code></pre></div><h3 id="示例-4"><a href="#示例-4" class="header-anchor">#</a> 示例 4：</h3> <div class="language- extra-class"><pre class="language-text"><code>输入：root1 = [1,2], root2 = [2,2]
+输出：true
+</code></pre></div><h3 id="示例-5"><a href="#示例-5" class="header-anchor">#</a> 示例 5：</h3> <p><img src="https://assets.leetcode.com/uploads/2020/09/03/leaf-similar-2.jpg" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root1 = [1,2,3], root2 = [1,3,2]
+输出：false
+</code></pre></div><h2 id="分析"><a href="#分析" class="header-anchor">#</a> 分析</h2> <p>可以借助 dfs，bfs等搜索方法 找到叶节点，最后对比两个数生成叶节点是否相同</p> <p>可以借助 toString() 和 join() 等函数来生成 字符串来对比是否相同。</p> <h3 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">leafSimilar</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">root1<span class="token punctuation">,</span> root2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> res1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">let</span> res2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">dfs</span> <span class="token operator">=</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>node<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left <span class="token operator">===</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>right<span class="token operator">===</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+        node<span class="token punctuation">.</span>left <span class="token operator">&amp;&amp;</span> <span class="token function">dfs</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span>res<span class="token punctuation">)</span>
+        node<span class="token punctuation">.</span>right <span class="token operator">&amp;&amp;</span> <span class="token function">dfs</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span>res<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>root1<span class="token punctuation">,</span>res1<span class="token punctuation">)</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span>root2<span class="token punctuation">,</span>res2<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> res2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <ul><li><a href="https://leetcode-cn.com/problems/leaf-similar-trees/" target="_blank" rel="noopener noreferrer">leetcode题目链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/leaf-similar-trees/solution/xie-zi-xiang-si-de-shu-by-leetcode-solut-z0w6/" target="_blank" rel="noopener noreferrer">官方题解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a252eea2.js" defer></script><script src="/assets/js/2.9b5bef0b.js" defer></script><script src="/assets/js/60.66293951.js" defer></script>
+  </body>
+</html>
