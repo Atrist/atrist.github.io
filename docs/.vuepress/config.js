@@ -47,14 +47,18 @@ module.exports = {
           {
             text: '工具',
             link: '/know/tool/',
-            items: [{ text: 'git', link: '/know/tool/git/' } , { text: 'vscode', link: '/know/tool/vscode/'}],
+            items: [
+              { text: 'git', link: '/know/tool/git/' },
+              { text: 'vscode', link: '/know/tool/vscode/' },
+            ],
           },
           {
-            text: '算法与数据结构', link: '/know/algorithm/',
+            text: '算法与数据结构',
+            link: '/know/algorithm/',
             items: [
               { text: '算法', link: '/know/algorithm/algorithm/' },
-              { text: '数据结构', link: '/know/algorithm/data/' }
-            ]
+              { text: '数据结构', link: '/know/algorithm/data/' },
+            ],
           },
         ],
       },
@@ -84,10 +88,21 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/know/front/': addCommonConfig([['HTML', '/know/front/html/'], ['CSS', '/know/front/css/'], ['Javascript', '/know/front/javascript/'], ['网络','/know/front/network/']]),
+      '/know/front/': addCommonConfig([
+        ['HTML', '/know/front/html/'],
+        ['CSS', '/know/front/css/'],
+        ['Javascript', '/know/front/javascript/'],
+        ['网络', '/know/front/network/'],
+      ]),
       '/know/back/': addCommonConfig([['NodeJs', '/know/back/nodejs/']]),
-      '/know/algorithm/': addCommonConfig([['算法','/know/algorithm/algorithm/'], ['数据结构','/know/algorithm/data/']]),
-      '/know/tool/': addCommonConfig([['Git','/know/tool/git/'], ['Vscode', '/know/tool/vscode/']]),
+      '/know/algorithm/': addCommonConfig([
+        ['算法', '/know/algorithm/algorithm/'],
+        ['数据结构', '/know/algorithm/data/'],
+      ]),
+      '/know/tool/': addCommonConfig([
+        ['Git', '/know/tool/git/'],
+        ['Vscode', '/know/tool/vscode/'],
+      ]),
       '/answer/': [
         {
           title: '前端',
@@ -149,7 +164,9 @@ module.exports = {
     ],
     ['baidu-autopush'],
     ['seo'],
-    ['@xiaopanda/vuepress-plugin-code-copy']
+    ['@xiaopanda/vuepress-plugin-code-copy'],
+    ['feed', { canonical_base: 'https://atrist.github.io' }],
+    ['vuepress-plugin-mathjax'],
   ],
 }
 
@@ -173,12 +190,14 @@ function sort(data) {
     parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0])
   })
   // 标题删除 排序数字
-  return data.map((item) => ({ ...item, title: item.title.split('-')[1]?item.title.split('-')[1]:item.title }))
+  return data.map((item) => ({
+    ...item,
+    title: item.title.split('-')[1] ? item.title.split('-')[1] : item.title,
+  }))
 }
 
-
 /**
- * 
+ *
  * @param [] Array 二维数组 0 标题 1 路径
  * @returns 对象数组
  */

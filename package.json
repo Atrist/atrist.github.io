@@ -10,10 +10,12 @@
     "vuepress": "^1.8.2",
     "vuepress-plugin-autometa": "^0.1.13",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
+    "vuepress-plugin-feed": "^0.1.9",
+    "vuepress-plugin-mathjax": "^1.2.8",
     "vuepress-plugin-seo": "^0.1.4"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
+    "start": "vuepress dev docs",
     "build": "vuepress build docs",
     "serve": "vuepress serve docs"
   },
