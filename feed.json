@@ -6,17 +6,17 @@
     "description": "前端的基础知识集中, 相关业务场景的解决方案集中, 项目源码阅读过程中的一些感悟",
     "items": [
         {
-            "id": "https://atrist.github.io/_posts/",
-            "url": "https://atrist.github.io/_posts/",
-            "title": "文件夹目的",
-            "date_modified": "2021-08-22T13:13:28.463Z"
-        },
-        {
-            "id": "https://atrist.github.io/_posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
-            "url": "https://atrist.github.io/_posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
+            "id": "https://atrist.github.io/answer/_posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
+            "url": "https://atrist.github.io/answer/_posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
             "title": "题目",
             "summary": "你在进行一个简化版的吃豆人游戏。你从 [0, 0] 点开始出发，你的目的地是 target = [xtarget, ytarget] 。地图上有一些阻碍者，以数组 ghosts 给出，第 i 个阻碍者从 ghosts[i] = [xi, yi] 出发。所有输入均为 整数坐标 。",
-            "date_modified": "2021-08-22T13:13:28.464Z"
+            "date_modified": "2021-08-22T13:34:22.928Z"
+        },
+        {
+            "id": "https://atrist.github.io/answer/_posts/",
+            "url": "https://atrist.github.io/answer/_posts/",
+            "title": "文件夹目的",
+            "date_modified": "2021-08-22T13:34:22.929Z"
         }
     ]
 }
