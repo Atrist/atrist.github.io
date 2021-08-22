@@ -128,6 +128,12 @@ module.exports = {
           path: '/answer/interview/',
           children: getFilesByPath('/answer/interview/'),
         },
+        {
+          title: '每日一题',
+          collapsable: false,
+          path: '/answer/_posts/',
+          children: getFilesByPath('/answer/_posts/'),
+        },
       ],
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/': [
@@ -165,7 +171,13 @@ module.exports = {
     ['baidu-autopush'],
     ['seo'],
     ['@xiaopanda/vuepress-plugin-code-copy'],
-    ['feed', { canonical_base: 'https://atrist.github.io' }],
+    [
+      'feed',
+      {
+        canonical_base: 'https://atrist.github.io',
+        posts_directories: ['/answer/_posts/'],
+      },
+    ],
     ['vuepress-plugin-mathjax'],
   ],
 }
