@@ -6,24 +6,24 @@
     "description": "前端的基础知识集中, 相关业务场景的解决方案集中, 项目源码阅读过程中的一些感悟",
     "items": [
         {
-            "id": "https://atrist.github.io/answer/posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
-            "url": "https://atrist.github.io/answer/posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
-            "title": "题目",
-            "summary": "你在进行一个简化版的吃豆人游戏。你从 [0, 0] 点开始出发，你的目的地是 target = [xtarget, ytarget] 。地图上有一些阻碍者，以数组 ghosts 给出，第 i 个阻碍者从 ghosts[i] = [xi, yi] 出发。所有输入均为 整数坐标 。",
-            "date_modified": "2021-08-23T03:50:48.654Z"
-        },
-        {
             "id": "https://atrist.github.io/answer/posts/1646.%20%E8%8E%B7%E5%8F%96%E7%94%9F%E6%88%90%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC.html",
             "url": "https://atrist.github.io/answer/posts/1646.%20%E8%8E%B7%E5%8F%96%E7%94%9F%E6%88%90%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC.html",
-            "title": "题目",
+            "title": "1646. 获取生成数组中的最大值",
             "summary": "返回生成数组 nums 中的 最大 值。",
-            "date_modified": "2021-08-23T03:50:48.654Z"
+            "date_modified": "2021-08-23T04:02:07.810Z"
+        },
+        {
+            "id": "https://atrist.github.io/answer/posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
+            "url": "https://atrist.github.io/answer/posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html",
+            "title": "789. 逃脱阻碍者",
+            "summary": "你在进行一个简化版的吃豆人游戏。你从 [0, 0] 点开始出发，你的目的地是 target = [xtarget, ytarget] 。地图上有一些阻碍者，以数组 ghosts 给出，第 i 个阻碍者从 ghosts[i] = [xi, yi] 出发。所有输入均为 整数坐标 。",
+            "date_modified": "2021-08-23T04:02:07.810Z"
         },
         {
             "id": "https://atrist.github.io/answer/posts/",
             "url": "https://atrist.github.io/answer/posts/",
             "title": "文件夹目的",
-            "date_modified": "2021-08-23T03:50:48.654Z"
+            "date_modified": "2021-08-23T04:02:07.810Z"
         }
     ]
 }
