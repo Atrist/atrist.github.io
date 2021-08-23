@@ -86,6 +86,10 @@ module.exports = {
         link: '/workshop/',
         items: [{ text: 'Cli', link: '/workshop/cli/' }],
       },
+      {
+        text: '博客',
+        link: '/answer/posts/'
+      }
     ],
     sidebar: {
       '/know/front/': addCommonConfig([
@@ -103,6 +107,7 @@ module.exports = {
         ['Git', '/know/tool/git/'],
         ['Vscode', '/know/tool/vscode/'],
       ]),
+      '/answer/posts/': addCommonConfig([['每日一题', '/answer/posts/']]),
       '/answer/': [
         {
           title: '前端',
