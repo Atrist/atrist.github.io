@@ -3,5 +3,16 @@
 
 详细文档: [https://www.git-scm.com/docs/git-log](https://www.git-scm.com/docs/git-log)
 
-
-## 
+### reverse
+```
+git log --reverse
+```
+以倒序的方式输出log日志
+## 查看远程仓库的日志
+```
+git log 远程仓库名
+```
+示例
+```
+git log remotes/origin/master
+```

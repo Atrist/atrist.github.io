@@ -131,8 +131,8 @@ module.exports = {
         {
           title: '每日一题',
           collapsable: false,
-          path: '/answer/_posts/',
-          children: getFilesByPath('/answer/_posts/'),
+          path: '/answer/posts/',
+          children: getFilesByPath('/answer/posts/'),
         },
       ],
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
@@ -175,7 +175,7 @@ module.exports = {
       'feed',
       {
         canonical_base: 'https://atrist.github.io',
-        posts_directories: ['/answer/_posts/'],
+        posts_directories: ['/answer/posts/'],
       },
     ],
     ['vuepress-plugin-mathjax'],
