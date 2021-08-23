@@ -85,10 +85,6 @@ module.exports = {
         text: '项目集成',
         link: '/workshop/',
         items: [{ text: 'Cli', link: '/workshop/cli/' }],
-      },
-      {
-        text: '博客',
-        link: '/answer/posts/'
       }
     ],
     sidebar: {
@@ -107,7 +103,7 @@ module.exports = {
         ['Git', '/know/tool/git/'],
         ['Vscode', '/know/tool/vscode/'],
       ]),
-      '/answer/posts/': addCommonConfig([['每日一题', '/answer/posts/']]),
+      '/posts/': addCommonConfig([['每日一题', '/posts/']]),
       '/answer/': [
         {
           title: '前端',
@@ -174,7 +170,7 @@ module.exports = {
       'feed',
       {
         canonical_base: 'https://atrist.github.io',
-        posts_directories: ['/answer/posts/'],
+        posts_directories: ['/posts/'],
       },
     ],
     ['vuepress-plugin-mathjax'],
