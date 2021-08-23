@@ -127,13 +127,7 @@ module.exports = {
           collapsable: false,
           path: '/answer/interview/',
           children: getFilesByPath('/answer/interview/'),
-        },
-        {
-          title: '每日一题',
-          collapsable: false,
-          path: '/answer/posts/',
-          children: getFilesByPath('/answer/posts/'),
-        },
+        }
       ],
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/': [
