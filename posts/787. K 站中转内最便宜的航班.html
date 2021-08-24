@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>787. K 站中转内最便宜的航班 | Atrist</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="alternate" type="application/rss+xml" href="https://atrist.github.io/rss.xml" title="Atrist RSS Feed">
+    <link rel="alternate" type="application/atom+xml" href="https://atrist.github.io/feed.atom" title="Atrist Atom Feed">
+    <link rel="alternate" type="application/json" href="https://atrist.github.io/feed.json" title="Atrist JSON Feed">
+    <meta name="description" content="有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromi, toi, pricei] ，表示该航班都从城市 fromi 开始，以价格 toi 抵达 pricei。">
+    <meta name="twitter:title" content="787. K 站中转内最便宜的航班">
+    <meta name="twitter:description" content="有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromi, toi, pricei] ，表示该航班都从城市 fromi 开始，以价格 toi 抵达 pricei。">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="787. K 站中转内最便宜的航班">
+    <meta property="og:description" content="有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromi, toi, pricei] ，表示该航班都从城市 fromi 开始，以价格 toi 抵达 pricei。">
+    <meta property="og:site_name" content="Atrist">
+    <meta property="article:published_time" content="2021-08-24Z10:00:00">
+    <meta itemprop="name" content="787. K 站中转内最便宜的航班">
+    <meta itemprop="description" content="有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromi, toi, pricei] ，表示该航班都从城市 fromi 开始，以价格 toi 抵达 pricei。">
+    <meta property="og:url" content="/posts/787.%20K%20%E7%AB%99%E4%B8%AD%E8%BD%AC%E5%86%85%E6%9C%80%E4%BE%BF%E5%AE%9C%E7%9A%84%E8%88%AA%E7%8F%AD.html">
+    <meta name="twitter:url" content="/posts/787.%20K%20%E7%AB%99%E4%B8%AD%E8%BD%AC%E5%86%85%E6%9C%80%E4%BE%BF%E5%AE%9C%E7%9A%84%E8%88%AA%E7%8F%AD.html">
+    <meta name="google-site-verification" content="dmBwuwXMb8fdF5HD1TOPyGTFAQUzV9O9vN4Mh06slnY">
+    <meta name="baidu-site-verification" content="code-HK08p9tJHw">
+    
+    <link rel="preload" href="/assets/css/0.styles.1234d39d.css" as="style"><link rel="preload" href="/assets/js/app.57982330.js" as="script"><link rel="preload" href="/assets/js/2.30d3e99e.js" as="script"><link rel="preload" href="/assets/js/100.494f2626.js" as="script"><link rel="prefetch" href="/assets/js/10.e50dc1cd.js"><link rel="prefetch" href="/assets/js/101.543b889f.js"><link rel="prefetch" href="/assets/js/102.d3d3b64c.js"><link rel="prefetch" href="/assets/js/103.76446b31.js"><link rel="prefetch" href="/assets/js/104.926e4ada.js"><link rel="prefetch" href="/assets/js/105.1f752730.js"><link rel="prefetch" href="/assets/js/106.78e96a18.js"><link rel="prefetch" href="/assets/js/11.7122951d.js"><link rel="prefetch" href="/assets/js/12.0e13b4bf.js"><link rel="prefetch" href="/assets/js/13.05591499.js"><link rel="prefetch" href="/assets/js/14.f6950399.js"><link rel="prefetch" href="/assets/js/15.a67eb632.js"><link rel="prefetch" href="/assets/js/16.587aeb09.js"><link rel="prefetch" href="/assets/js/17.9e0bc121.js"><link rel="prefetch" href="/assets/js/18.2dd93ed7.js"><link rel="prefetch" href="/assets/js/19.a4a69263.js"><link rel="prefetch" href="/assets/js/20.c5be763e.js"><link rel="prefetch" href="/assets/js/21.d8c366cd.js"><link rel="prefetch" href="/assets/js/22.5157b4f8.js"><link rel="prefetch" href="/assets/js/23.6e61061f.js"><link rel="prefetch" href="/assets/js/24.01008db4.js"><link rel="prefetch" href="/assets/js/25.07d1b6c3.js"><link rel="prefetch" href="/assets/js/26.94377b13.js"><link rel="prefetch" href="/assets/js/27.08664db4.js"><link rel="prefetch" href="/assets/js/28.558ff60a.js"><link rel="prefetch" href="/assets/js/29.abb41c95.js"><link rel="prefetch" href="/assets/js/3.1c53e23e.js"><link rel="prefetch" href="/assets/js/30.836fe536.js"><link rel="prefetch" href="/assets/js/31.a6f24879.js"><link rel="prefetch" href="/assets/js/32.0520d372.js"><link rel="prefetch" href="/assets/js/33.65f37729.js"><link rel="prefetch" href="/assets/js/34.fab055a1.js"><link rel="prefetch" href="/assets/js/35.7b2f1aa7.js"><link rel="prefetch" href="/assets/js/36.9ad9a267.js"><link rel="prefetch" href="/assets/js/37.b826a0f3.js"><link rel="prefetch" href="/assets/js/38.4e567c5a.js"><link rel="prefetch" href="/assets/js/39.15a6f46a.js"><link rel="prefetch" href="/assets/js/4.6d4c9bd5.js"><link rel="prefetch" href="/assets/js/40.c19185cb.js"><link rel="prefetch" href="/assets/js/41.6bdb91c2.js"><link rel="prefetch" href="/assets/js/42.d094f743.js"><link rel="prefetch" href="/assets/js/43.2e54f713.js"><link rel="prefetch" href="/assets/js/44.c6a95c30.js"><link rel="prefetch" href="/assets/js/45.57e9749c.js"><link rel="prefetch" href="/assets/js/46.e22ab47d.js"><link rel="prefetch" href="/assets/js/47.68ec233f.js"><link rel="prefetch" href="/assets/js/48.14d1b311.js"><link rel="prefetch" href="/assets/js/49.50b659f0.js"><link rel="prefetch" href="/assets/js/5.e80cd129.js"><link rel="prefetch" href="/assets/js/50.557eba74.js"><link rel="prefetch" href="/assets/js/51.173b5ad8.js"><link rel="prefetch" href="/assets/js/52.b4b9a222.js"><link rel="prefetch" href="/assets/js/53.39c44839.js"><link rel="prefetch" href="/assets/js/54.f47c3804.js"><link rel="prefetch" href="/assets/js/55.670b2620.js"><link rel="prefetch" href="/assets/js/56.930a8dd1.js"><link rel="prefetch" href="/assets/js/57.d530dcd9.js"><link rel="prefetch" href="/assets/js/58.25657cc0.js"><link rel="prefetch" href="/assets/js/59.f84ab819.js"><link rel="prefetch" href="/assets/js/6.1c11c11e.js"><link rel="prefetch" href="/assets/js/60.4bafeb43.js"><link rel="prefetch" href="/assets/js/61.e9c064bd.js"><link rel="prefetch" href="/assets/js/62.4454b364.js"><link rel="prefetch" href="/assets/js/63.9f317b39.js"><link rel="prefetch" href="/assets/js/64.b1698b2e.js"><link rel="prefetch" href="/assets/js/65.7ae29d97.js"><link rel="prefetch" href="/assets/js/66.7ae03647.js"><link rel="prefetch" href="/assets/js/67.e2d6ae46.js"><link rel="prefetch" href="/assets/js/68.7c5951c9.js"><link rel="prefetch" href="/assets/js/69.16af07c8.js"><link rel="prefetch" href="/assets/js/7.64f33540.js"><link rel="prefetch" href="/assets/js/70.e08447fb.js"><link rel="prefetch" href="/assets/js/71.47f411dc.js"><link rel="prefetch" href="/assets/js/72.fc694b99.js"><link rel="prefetch" href="/assets/js/73.e8a4d583.js"><link rel="prefetch" href="/assets/js/74.59efdfb6.js"><link rel="prefetch" href="/assets/js/75.2ea9e51f.js"><link rel="prefetch" href="/assets/js/76.ec91f91e.js"><link rel="prefetch" href="/assets/js/77.fb0e6d80.js"><link rel="prefetch" href="/assets/js/78.9f0856a4.js"><link rel="prefetch" href="/assets/js/79.afc049ae.js"><link rel="prefetch" href="/assets/js/8.516e6f37.js"><link rel="prefetch" href="/assets/js/80.49bc2c57.js"><link rel="prefetch" href="/assets/js/81.8064ec43.js"><link rel="prefetch" href="/assets/js/82.072dfa67.js"><link rel="prefetch" href="/assets/js/83.f78ae8a3.js"><link rel="prefetch" href="/assets/js/84.fddcb846.js"><link rel="prefetch" href="/assets/js/85.c042f405.js"><link rel="prefetch" href="/assets/js/86.87683010.js"><link rel="prefetch" href="/assets/js/87.97f76a4e.js"><link rel="prefetch" href="/assets/js/88.4ab981fe.js"><link rel="prefetch" href="/assets/js/89.f09ec9d0.js"><link rel="prefetch" href="/assets/js/9.634c9529.js"><link rel="prefetch" href="/assets/js/90.28c340ab.js"><link rel="prefetch" href="/assets/js/91.8204703e.js"><link rel="prefetch" href="/assets/js/92.ed816da0.js"><link rel="prefetch" href="/assets/js/93.c1faf344.js"><link rel="prefetch" href="/assets/js/94.bff58f41.js"><link rel="prefetch" href="/assets/js/95.b007dcb2.js"><link rel="prefetch" href="/assets/js/96.7179655e.js"><link rel="prefetch" href="/assets/js/97.bacfb162.js"><link rel="prefetch" href="/assets/js/98.1e4a1cc1.js"><link rel="prefetch" href="/assets/js/99.901badce.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1234d39d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Atrist</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/front/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/know/front/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/know/front/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/know/front/network/" class="nav-link">
+  网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/back/nodejs/" class="nav-link">
+  NodeJs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-subitem"><a href="/know/tool/vscode/" class="nav-link">
+  vscode
+</a></li></ul></li><li class="dropdown-item"><h4>
+          算法与数据结构
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/algorithm/algorithm/" class="nav-link">
+  算法
+</a></li><li class="dropdown-subitem"><a href="/know/algorithm/data/" class="nav-link">
+  数据结构
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/answer/" class="nav-link">
+  解决方案
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码阅读" class="dropdown-title"><span class="title">源码阅读</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码阅读" class="mobile-dropdown-title"><span class="title">源码阅读</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code/vitepress/" class="nav-link">
+  vitepress
+</a></li><li class="dropdown-item"><!----> <a href="/code/npm/" class="nav-link">
+  npm包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目集成" class="dropdown-title"><span class="title">项目集成</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目集成" class="mobile-dropdown-title"><span class="title">项目集成</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/workshop/cli/" class="nav-link">
+  Cli
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/front/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/know/front/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/know/front/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/know/front/network/" class="nav-link">
+  网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/back/nodejs/" class="nav-link">
+  NodeJs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-subitem"><a href="/know/tool/vscode/" class="nav-link">
+  vscode
+</a></li></ul></li><li class="dropdown-item"><h4>
+          算法与数据结构
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/know/algorithm/algorithm/" class="nav-link">
+  算法
+</a></li><li class="dropdown-subitem"><a href="/know/algorithm/data/" class="nav-link">
+  数据结构
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/answer/" class="nav-link">
+  解决方案
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码阅读" class="dropdown-title"><span class="title">源码阅读</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码阅读" class="mobile-dropdown-title"><span class="title">源码阅读</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/code/vitepress/" class="nav-link">
+  vitepress
+</a></li><li class="dropdown-item"><!----> <a href="/code/npm/" class="nav-link">
+  npm包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目集成" class="dropdown-title"><span class="title">项目集成</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目集成" class="mobile-dropdown-title"><span class="title">项目集成</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/workshop/cli/" class="nav-link">
+  Cli
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/posts/" class="sidebar-heading clickable router-link-active open"><span>每日一题</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/posts/1646. 获取生成数组中的最大值.html" class="sidebar-link">1646. 获取生成数组中的最大值</a></li><li><a href="/posts/787. K 站中转内最便宜的航班.html" class="active sidebar-link">787. K 站中转内最便宜的航班</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/posts/787. K 站中转内最便宜的航班.html#题目" class="sidebar-link">题目</a></li><li class="sidebar-sub-header"><a href="/posts/787. K 站中转内最便宜的航班.html#动态规划" class="sidebar-link">动态规划</a></li></ul></li><li><a href="/posts/789. 逃脱阻碍者.html" class="sidebar-link">789. 逃脱阻碍者</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="题目"><a href="#题目" class="header-anchor">#</a> 题目</h2> <p>有 n 个城市通过一些航班连接。给你一个数组 <code>flights</code> ，其中 <code>flights[i] = [fromi, toi, pricei]</code> ，表示该航班都从城市 <code>fromi</code> 开始，以价格 <code>toi</code> 抵达 <code>pricei</code>。</p> <p>现在给定所有的城市和航班，以及出发城市 <code>src</code> 和目的地 <code>dst</code>，你的任务是找到出一条最多经过 <code>k</code> 站中转的路线，使得从 <code>src</code> 到 <code>dst</code> 的 价格最便宜 ，并返回该价格。 如果不存在这样的路线，则输出 <code>-1</code>。</p> <h2 id="动态规划"><a href="#动态规划" class="header-anchor">#</a> 动态规划</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/posts/1646. 获取生成数组中的最大值.html" class="prev">
+        1646. 获取生成数组中的最大值
+      </a></span> <span class="next"><a href="/posts/789. 逃脱阻碍者.html">
+        789. 逃脱阻碍者
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.57982330.js" defer></script><script src="/assets/js/2.30d3e99e.js" defer></script><script src="/assets/js/100.494f2626.js" defer></script>
+  </body>
+</html>

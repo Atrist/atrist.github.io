@@ -4,7 +4,7 @@
         <title>Atrist</title>
         <link>https://atrist.github.io</link>
         <description>前端的基础知识集中, 相关业务场景的解决方案集中, 项目源码阅读过程中的一些感悟</description>
-        <lastBuildDate>Mon, 23 Aug 2021 14:03:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Aug 2021 11:46:34 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://atrist.github.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -12,21 +12,28 @@
             <title><![CDATA[1646. 获取生成数组中的最大值]]></title>
             <link>https://atrist.github.io/posts/1646.%20%E8%8E%B7%E5%8F%96%E7%94%9F%E6%88%90%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC.html</link>
             <guid>https://atrist.github.io/posts/1646.%20%E8%8E%B7%E5%8F%96%E7%94%9F%E6%88%90%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC.html</guid>
-            <pubDate>Mon, 23 Aug 2021 14:03:24 GMT</pubDate>
+            <pubDate>Mon, 23 Aug 2021 10:00:00 GMT</pubDate>
             <description><![CDATA[返回生成数组 nums 中的 最大 值。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[787. K 站中转内最便宜的航班]]></title>
+            <link>https://atrist.github.io/posts/787.%20K%20%E7%AB%99%E4%B8%AD%E8%BD%AC%E5%86%85%E6%9C%80%E4%BE%BF%E5%AE%9C%E7%9A%84%E8%88%AA%E7%8F%AD.html</link>
+            <guid>https://atrist.github.io/posts/787.%20K%20%E7%AB%99%E4%B8%AD%E8%BD%AC%E5%86%85%E6%9C%80%E4%BE%BF%E5%AE%9C%E7%9A%84%E8%88%AA%E7%8F%AD.html</guid>
+            <pubDate>Tue, 24 Aug 2021 10:00:00 GMT</pubDate>
+            <description><![CDATA[有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromi, toi, pricei] ，表示该航班都从城市 fromi 开始，以价格 toi 抵达 pricei。]]></description>
         </item>
         <item>
             <title><![CDATA[789. 逃脱阻碍者]]></title>
             <link>https://atrist.github.io/posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html</link>
             <guid>https://atrist.github.io/posts/789.%20%E9%80%83%E8%84%B1%E9%98%BB%E7%A2%8D%E8%80%85.html</guid>
-            <pubDate>Mon, 23 Aug 2021 14:03:24 GMT</pubDate>
+            <pubDate>Sun, 22 Aug 2021 10:00:00 GMT</pubDate>
             <description><![CDATA[你在进行一个简化版的吃豆人游戏。你从 [0, 0] 点开始出发，你的目的地是 target = [xtarget, ytarget] 。地图上有一些阻碍者，以数组 ghosts 给出，第 i 个阻碍者从 ghosts[i] = [xi, yi] 出发。所有输入均为 整数坐标 。]]></description>
         </item>
         <item>
             <title><![CDATA[文件夹目的]]></title>
             <link>https://atrist.github.io/posts/</link>
             <guid>https://atrist.github.io/posts/</guid>
-            <pubDate>Mon, 23 Aug 2021 14:03:24 GMT</pubDate>
+            <pubDate>Tue, 24 Aug 2021 11:46:34 GMT</pubDate>
         </item>
     </channel>
 </rss>
