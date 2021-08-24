@@ -4,7 +4,7 @@
         <title>Atrist</title>
         <link>https://atrist.github.io</link>
         <description>前端的基础知识集中, 相关业务场景的解决方案集中, 项目源码阅读过程中的一些感悟</description>
-        <lastBuildDate>Tue, 24 Aug 2021 11:46:34 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Aug 2021 14:13:58 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://atrist.github.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -33,7 +33,7 @@
             <title><![CDATA[文件夹目的]]></title>
             <link>https://atrist.github.io/posts/</link>
             <guid>https://atrist.github.io/posts/</guid>
-            <pubDate>Tue, 24 Aug 2021 11:46:34 GMT</pubDate>
+            <pubDate>Tue, 24 Aug 2021 14:13:58 GMT</pubDate>
         </item>
     </channel>
 </rss>
