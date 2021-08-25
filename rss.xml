@@ -4,7 +4,7 @@
         <title>Atrist</title>
         <link>https://atrist.github.io</link>
         <description>前端的基础知识集中, 相关业务场景的解决方案集中, 项目源码阅读过程中的一些感悟</description>
-        <lastBuildDate>Tue, 24 Aug 2021 14:13:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 Aug 2021 11:50:59 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://atrist.github.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -30,10 +30,16 @@
             <description><![CDATA[你在进行一个简化版的吃豆人游戏。你从 [0, 0] 点开始出发，你的目的地是 target = [xtarget, ytarget] 。地图上有一些阻碍者，以数组 ghosts 给出，第 i 个阻碍者从 ghosts[i] = [xi, yi] 出发。所有输入均为 整数坐标 。]]></description>
         </item>
         <item>
+            <title><![CDATA[题目]]></title>
+            <link>https://atrist.github.io/posts/797.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E8%B7%AF%E5%BE%84.html</link>
+            <guid>https://atrist.github.io/posts/797.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E8%B7%AF%E5%BE%84.html</guid>
+            <pubDate>Wed, 25 Aug 2021 11:50:59 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[文件夹目的]]></title>
             <link>https://atrist.github.io/posts/</link>
             <guid>https://atrist.github.io/posts/</guid>
-            <pubDate>Tue, 24 Aug 2021 14:13:58 GMT</pubDate>
+            <pubDate>Wed, 25 Aug 2021 11:50:59 GMT</pubDate>
         </item>
     </channel>
 </rss>
