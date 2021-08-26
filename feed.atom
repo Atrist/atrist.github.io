@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://atrist.github.io</id>
     <title>Atrist</title>
-    <updated>2021-08-25T11:50:59.896Z</updated>
+    <updated>2021-08-26T10:21:11.347Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://atrist.github.io"/>
     <link rel="self" href="https://atrist.github.io/feed.atom"/>
@@ -32,17 +32,25 @@
         <summary type="html"><![CDATA[你在进行一个简化版的吃豆人游戏。你从 [0, 0] 点开始出发，你的目的地是 target = [xtarget, ytarget] 。地图上有一些阻碍者，以数组 ghosts 给出，第 i 个阻碍者从 ghosts[i] = [xi, yi] 出发。所有输入均为 整数坐标 。]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[881. 救生艇]]></title>
+        <id>https://atrist.github.io/posts/881.%20%E6%95%91%E7%94%9F%E8%89%87.html</id>
+        <link href="https://atrist.github.io/posts/881.%20%E6%95%91%E7%94%9F%E8%89%87.html">
+        </link>
+        <updated>2021-08-26T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[第 i 个人的体重为 people[i]，每艘船可以承载的最大重量为 limit。]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[题目]]></title>
         <id>https://atrist.github.io/posts/797.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E8%B7%AF%E5%BE%84.html</id>
         <link href="https://atrist.github.io/posts/797.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E8%B7%AF%E5%BE%84.html">
         </link>
-        <updated>2021-08-25T11:50:59.891Z</updated>
+        <updated>2021-08-26T10:21:11.341Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[文件夹目的]]></title>
         <id>https://atrist.github.io/posts/</id>
         <link href="https://atrist.github.io/posts/">
         </link>
-        <updated>2021-08-25T11:50:59.891Z</updated>
+        <updated>2021-08-26T10:21:11.341Z</updated>
     </entry>
 </feed>

@@ -27,16 +27,23 @@
             "date_modified": "2021-08-22T10:00:00.000Z"
         },
         {
+            "id": "https://atrist.github.io/posts/881.%20%E6%95%91%E7%94%9F%E8%89%87.html",
+            "url": "https://atrist.github.io/posts/881.%20%E6%95%91%E7%94%9F%E8%89%87.html",
+            "title": "881. 救生艇",
+            "summary": "第 i 个人的体重为 people[i]，每艘船可以承载的最大重量为 limit。",
+            "date_modified": "2021-08-26T10:00:00.000Z"
+        },
+        {
             "id": "https://atrist.github.io/posts/797.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E8%B7%AF%E5%BE%84.html",
             "url": "https://atrist.github.io/posts/797.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E8%B7%AF%E5%BE%84.html",
             "title": "题目",
-            "date_modified": "2021-08-25T11:50:59.891Z"
+            "date_modified": "2021-08-26T10:21:11.341Z"
         },
         {
             "id": "https://atrist.github.io/posts/",
             "url": "https://atrist.github.io/posts/",
             "title": "文件夹目的",
-            "date_modified": "2021-08-25T11:50:59.891Z"
+            "date_modified": "2021-08-26T10:21:11.341Z"
         }
     ]
 }
