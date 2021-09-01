@@ -79,6 +79,11 @@ module.exports = {
             text: 'npm包',
             link: '/code/npm/',
           },
+          {
+            text: 'nuxt',
+            link: '/code/nuxt/',
+
+          }
         ],
       },
       {
@@ -145,6 +150,14 @@ module.exports = {
           sidebarDepth: 2,
           children: getFilesByPath('/code/npm/'),
         },
+        {
+          title: 'Nuxt',
+          path: '/code/nuxt/',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: getFilesByPath('/code/nuxt/'),
+        }
+        
       ],
     },
   },
