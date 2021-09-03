@@ -37,6 +37,7 @@ module.exports = {
               { text: 'CSS', link: '/know/front/css/' },
               { text: 'Javascript', link: '/know/front/javascript/' },
               { text: '网络', link: '/know/front/network/' },
+              { text: 'webpack', link: '/know/front/webpack/'}
             ],
           },
           {
@@ -206,9 +207,7 @@ function getFilesByPath(filepath, sortFlag) {
   return sort(res)
 }
 function sort(data) {
-  data.sort((a, b) => {
-    parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0])
-  })
+  data.sort((a, b) => parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0]))
   // 标题删除 排序数字
   return data.map((item) => ({
     ...item,
