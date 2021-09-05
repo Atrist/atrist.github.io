@@ -37,7 +37,7 @@ module.exports = {
               { text: 'CSS', link: '/know/front/css/' },
               { text: 'Javascript', link: '/know/front/javascript/' },
               { text: '网络', link: '/know/front/network/' },
-              { text: 'webpack', link: '/know/front/webpack/'}
+              { text: 'webpack', link: '/know/front/webpack/' },
             ],
           },
           {
@@ -83,15 +83,14 @@ module.exports = {
           {
             text: 'nuxt',
             link: '/code/nuxt/',
-
-          }
+          },
         ],
       },
       {
         text: '项目集成',
         link: '/workshop/',
         items: [{ text: 'Cli', link: '/workshop/cli/' }],
-      }
+      },
     ],
     sidebar: {
       '/know/front/': addCommonConfig([
@@ -118,23 +117,23 @@ module.exports = {
           children: ['/answer/web/拖拽.md'],
         },
         {
-          title: '剑指offer',
-          collapsable: false,
-          path: '/answer/offer/',
-          children: getFilesByPath('/answer/offer/'),
-        },
-        {
           title: '业务',
           collapsable: false,
           path: '/answer/business/',
           children: getFilesByPath('/answer/business/'),
         },
         {
+          title: '剑指offer',
+          collapsable: false,
+          path: '/answer/offer/',
+          children: getFilesByPath('/answer/offer/'),
+        },
+        {
           title: '面试',
           collapsable: false,
           path: '/answer/interview/',
           children: getFilesByPath('/answer/interview/'),
-        }
+        },
       ],
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/': [
@@ -157,8 +156,7 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: getFilesByPath('/code/nuxt/'),
-        }
-        
+        },
       ],
     },
   },
@@ -207,7 +205,9 @@ function getFilesByPath(filepath, sortFlag) {
   return sort(res)
 }
 function sort(data) {
-  data.sort((a, b) => parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0]))
+  data.sort(
+    (a, b) => parseInt(a.title.split('-')[0]) - parseInt(b.title.split('-')[0])
+  )
   // 标题删除 排序数字
   return data.map((item) => ({
     ...item,
