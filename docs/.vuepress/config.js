@@ -97,6 +97,7 @@ module.exports = {
         ['HTML', '/know/front/html/'],
         ['CSS', '/know/front/css/'],
         ['Javascript', '/know/front/javascript/'],
+        ['webpack', '/know/front/webpack/'],
         ['网络', '/know/front/network/'],
       ]),
       '/know/back/': addCommonConfig([['NodeJs', '/know/back/nodejs/']]),
