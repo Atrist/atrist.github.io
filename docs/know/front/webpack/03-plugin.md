@@ -1,4 +1,4 @@
 ## plugin
-这里为了方便罗列一些常用的plugin名称，安装和简单用法
+主要 plugin 列表: [https://webpack.js.org/plugins/](https://webpack.js.org/plugins/)
 
 ### 
