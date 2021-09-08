@@ -67,6 +67,11 @@ module.exports = {
         text: '解决方案',
         link: '/answer/',
         activeMatch: '^/answer/',
+        items: [
+          { text: 'answer', link: '/answer/' },
+          { text: 'webRTC', link: '/webRTC/' },
+          
+        ]
       },
       {
         text: '源码阅读',
@@ -136,6 +141,7 @@ module.exports = {
           children: getFilesByPath('/answer/interview/'),
         },
       ],
+      '/webRTC/': addCommonConfig([['webRTC', '/webRTC/'],['Janus', '/webRTC/janus/']]),
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/': [
         {
