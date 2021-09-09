@@ -6,6 +6,7 @@
   "author": "atrist <atristmu@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
     "@xiaopanda/vuepress-plugin-code-copy": "^1.0.3",
     "vuepress": "^1.8.2",
     "vuepress-plugin-autometa": "^0.1.13",

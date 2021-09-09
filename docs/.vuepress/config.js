@@ -26,24 +26,33 @@ module.exports = {
     search: false,
     nav: [
       {
-        text: '基础知识',
-        ariaLabel: '基础知识',
+        text: '前端',
+        ariaLabel: '前端',
         items: [
           {
-            text: '前端',
+            text: '基础',
             link: '/know/front/',
             items: [
               { text: 'HTML', link: '/know/front/html/' },
               { text: 'CSS', link: '/know/front/css/' },
-              { text: 'Javascript', link: '/know/front/javascript/' },
-              { text: '网络', link: '/know/front/network/' },
-              { text: 'webpack', link: '/know/front/webpack/' },
+              { text: 'Javascript', link: '/know/javascript/' },
             ],
           },
           {
-            text: '后端',
-            link: '/know/back/',
-            items: [{ text: 'NodeJs', link: '/know/back/nodejs/' }],
+            text: '工程化',
+            ariaLabel: '工程化',
+            items: [
+              { text: 'webpack', link: '/know/engineering/webpack/' },
+            ]
+          },
+          {
+            text: '计算机基础',
+            link: '/know/computer/',
+            items: [
+              { text: '算法', link: '/know/computer/algorithm/' },
+              { text: '数据结构', link: '/know/computer/data/' },
+              { text: '网络', link: '/know/computer/network/' }
+            ]
           },
           {
             text: '工具',
@@ -53,24 +62,21 @@ module.exports = {
               { text: 'vscode', link: '/know/tool/vscode/' },
             ],
           },
-          {
-            text: '算法与数据结构',
-            link: '/know/algorithm/',
-            items: [
-              { text: '算法', link: '/know/algorithm/algorithm/' },
-              { text: '数据结构', link: '/know/algorithm/data/' },
-            ],
-          },
         ],
       },
       {
         text: '解决方案',
-        link: '/answer/',
-        activeMatch: '^/answer/',
+        ariaLabel: '解决方案',
         items: [
-          { text: 'answer', link: '/answer/' },
-          { text: 'webRTC', link: '/webRTC/' },
-          
+          {
+            text: '通用', ariaLabel: '通用', link: '/answer/common/',
+          },
+          {
+            text: '音视频',
+            ariaLabel: '音视频',
+            items: [
+              { text:'webRTC', link: '/answer/webRTC/'}
+          ] },
         ]
       },
       {
@@ -101,51 +107,51 @@ module.exports = {
       '/know/front/': addCommonConfig([
         ['HTML', '/know/front/html/'],
         ['CSS', '/know/front/css/'],
-        ['Javascript', '/know/front/javascript/'],
-        ['webpack', '/know/front/webpack/'],
-        ['网络', '/know/front/network/'],
       ]),
-      '/know/back/': addCommonConfig([['NodeJs', '/know/back/nodejs/']]),
-      '/know/algorithm/': addCommonConfig([
-        ['算法', '/know/algorithm/algorithm/'],
-        ['数据结构', '/know/algorithm/data/'],
+      '/know/javascript/': addCommonConfig([['基础','/know/javascript/'],['DOM','/know/javascript/DOM/']]),
+      '/know/engineering/': addCommonConfig([['webpack', '/know/engineering/webpack/']]),
+      '/know/computer/': addCommonConfig([
+        ['算法', '/know/computer/algorithm/'],
+        ['数据结构', '/know/computer/data/'],
+        ['网络', '/know/computer/network/'],
       ]),
       '/know/tool/': addCommonConfig([
         ['Git', '/know/tool/git/'],
-        ['Vscode', '/know/tool/vscode/'],
+        ['Vscode', '/know/tool/vscode/'], 
       ]),
       '/posts/': addCommonConfig([['每日一题', '/posts/']]),
-      '/answer/': [
+      '/answer/common/':
+        [
         {
           title: '前端',
           collapsable: false,
-          path: '/answer/web/',
-          children: ['/answer/web/拖拽.md'],
+          path: '/answer/common/web/',
+          children: getFilesByPath('/answer/common/web/'),
         },
         {
           title: '业务',
           collapsable: false,
-          path: '/answer/business/',
-          children: getFilesByPath('/answer/business/'),
+          path: '/answer/common/business/',
+          children: getFilesByPath('/answer/common/business/'),
         },
         {
           title: '剑指offer',
           collapsable: false,
-          path: '/answer/offer/',
-          children: getFilesByPath('/answer/offer/'),
+          path: '/answer/common/offer/',
+          children: getFilesByPath('/answer/common/offer/'),
         },
         {
           title: '面试',
           collapsable: false,
-          path: '/answer/interview/',
-          children: getFilesByPath('/answer/interview/'),
+          path: '/answer/common/interview/',
+          children: getFilesByPath('/answer/common/interview/'),
         },
       ],
-      '/webRTC/': addCommonConfig([['webRTC', '/webRTC/'],['Janus', '/webRTC/janus/']]),
+      '/answer/webRTC/': addCommonConfig([['webRTC', '/answer/webRTC/'],['Janus', '/answer/webRTC/janus/']]),
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/': [
         {
-          title: 'viepress',
+          title: 'vitepress',
           path: '/code/vitepress/',
           collapsable: false,
           children: getFilesByPath('/code/vitepress/'),
@@ -193,6 +199,7 @@ module.exports = {
       },
     ],
     ['vuepress-plugin-mathjax'],
+    ['@vuepress/back-to-top']
   ],
 }
 
