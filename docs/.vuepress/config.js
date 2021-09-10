@@ -108,7 +108,7 @@ module.exports = {
         ['HTML', '/know/front/html/'],
         ['CSS', '/know/front/css/'],
       ]),
-      '/know/javascript/': addCommonConfig([['基础','/know/javascript/'],['DOM','/know/javascript/DOM/']]),
+      '/know/javascript/': addCommonConfig([['基础知识','/know/javascript/basic/'],['进阶知识','/know/javascript/advance/']]),
       '/know/engineering/': addCommonConfig([['webpack', '/know/engineering/webpack/']]),
       '/know/computer/': addCommonConfig([
         ['算法', '/know/computer/algorithm/'],

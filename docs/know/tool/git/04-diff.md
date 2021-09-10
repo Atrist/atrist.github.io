@@ -13,8 +13,11 @@
 	dv = difftool -t code -y
 ```
 这里只实现了串行的查看diff文件
-
-## stat
+### diff 查看 不同的tag
+```
+git diff v1.0 v2.0
+```
+### stat
 ```
 git diff head~1 head --stat
 ```
