@@ -42,7 +42,9 @@ module.exports = {
             text: '工程化',
             ariaLabel: '工程化',
             items: [
+              { text: 'React', link: '/know/engineering/react/' },
               { text: 'webpack', link: '/know/engineering/webpack/' },
+              
             ]
           },
           {
@@ -109,7 +111,7 @@ module.exports = {
         ['CSS', '/know/front/css/'],
       ]),
       '/know/javascript/': addCommonConfig([['基础知识','/know/javascript/basic/'],['进阶知识','/know/javascript/advance/']]),
-      '/know/engineering/': addCommonConfig([['webpack', '/know/engineering/webpack/']]),
+      '/know/engineering/': addCommonConfig([['webpack', '/know/engineering/webpack/'],['React','/know/engineering/react/']]),
       '/know/computer/': addCommonConfig([
         ['算法', '/know/computer/algorithm/'],
         ['数据结构', '/know/computer/data/'],
