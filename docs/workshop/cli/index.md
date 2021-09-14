@@ -1,14 +1,21 @@
-## Cli
-这一系列是集中 Atrist/CLi  项目过程中的所产生的文档. 
+# Cli
+这一系列是集中 @Atrist/CLi  项目过程中的所产生的文档. 
 
+## 使用
+@atrist/cli 会创建一个 A 的全局命令，便于使用
+
+功能列表
+1. g 通过模板创建一个文件, 现在模板默认为 template1.js
 ## 需求
 1. 实现功能列表
-2. 创建模板文件
+2. 创建模板文件(模板文件支持自定义)
+3. 
 
 ## 功能列表
 1. 支持全局安装
 2. 支持参数输入
 3. 根据参数具备对应功能
+
 
 ## 所有npm包
 1. [commander](https://www.npmjs.com/package/commander)： nodejs命令行样式
