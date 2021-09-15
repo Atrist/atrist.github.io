@@ -43,9 +43,8 @@ module.exports = {
             ariaLabel: '工程化',
             items: [
               { text: 'npm', link: '/know/engineering/npm/' },
-              { text: 'React', link: '/know/engineering/react/' },
               { text: 'webpack', link: '/know/engineering/webpack/' },
-              
+              { text: 'react', link: '/know/engineering/react/' },
             ]
           },
           {
@@ -87,17 +86,12 @@ module.exports = {
         link: '/code/',
         items: [
           {
-            text: 'vitepress',
-            link: '/code/vitepress/',
-          },
-          {
             text: 'npm包',
             link: '/code/npm/',
-          },
-          {
-            text: 'nuxt',
-            link: '/code/nuxt/',
-          },
+          }, {
+            text: 'react系列',
+            link: '/code/react/',
+          }
         ],
       },
       {
@@ -112,7 +106,7 @@ module.exports = {
         ['CSS', '/know/front/css/'],
       ]),
       '/know/javascript/': addCommonConfig([['基础知识','/know/javascript/basic/'],['进阶知识','/know/javascript/advance/']]),
-      '/know/engineering/': addCommonConfig([['npm','/know/engineering/npm/'], ['webpack', '/know/engineering/webpack/'], ['React', '/know/engineering/react/']]),
+      '/know/engineering/': addCommonConfig([['npm', '/know/engineering/npm/'], ['webpack', '/know/engineering/webpack/'], ['react', '/know/engineering/react/']]),
       '/know/computer/': addCommonConfig([
         ['算法', '/know/computer/algorithm/'],
         ['数据结构', '/know/computer/data/'],
@@ -152,28 +146,16 @@ module.exports = {
       ],
       '/answer/webRTC/': addCommonConfig([['webRTC', '/answer/webRTC/'],['Janus', '/answer/webRTC/janus/']]),
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
-      '/code/': [
-        {
-          title: 'vitepress',
-          path: '/code/vitepress/',
-          collapsable: false,
-          children: getFilesByPath('/code/vitepress/'),
-        },
+      '/code/npm/': [
         {
           title: 'NPM包',
           path: '/code/npm/',
           collapsable: false,
           sidebarDepth: 2,
           children: getFilesByPath('/code/npm/'),
-        },
-        {
-          title: 'Nuxt',
-          path: '/code/nuxt/',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: getFilesByPath('/code/nuxt/'),
-        },
+        }
       ],
+      '/code/react/': addCommonConfig([['react', '/code/react/react/'], ['redux', '/code/react/redux/'],['router', '/code/react/router/']]),
     },
   },
   plugins: [
@@ -228,7 +210,7 @@ function sort(data) {
   // 标题删除 排序数字
   return data.map((item) => ({
     ...item,
-    title: item.title.split('-')[1] ? item.title.split('-')[1] : item.title,
+    title: item.title.split('-')[1] ? item.title.split('-').slice(1) .join('-') : item.title,
   }))
 }
 
