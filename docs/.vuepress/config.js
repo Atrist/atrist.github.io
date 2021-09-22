@@ -91,6 +91,9 @@ module.exports = {
           }, {
             text: 'react系列',
             link: '/code/react/',
+          }, {
+            text: '开源源码阅读',
+            link: '/code/opensource/'
           }
         ],
       },
@@ -155,7 +158,8 @@ module.exports = {
           children: getFilesByPath('/code/npm/'),
         }
       ],
-      '/code/react/': addCommonConfig([['react', '/code/react/react/'], ['redux', '/code/react/redux/'],['router', '/code/react/router/']]),
+      '/code/react/': addCommonConfig([['react', '/code/react/react/'], ['redux', '/code/react/redux/'], ['router', '/code/react/router/']]),
+      '/code/opensource/': addCommonConfig([['源码阅读', '/code/opensource/']]),
     },
   },
   plugins: [
