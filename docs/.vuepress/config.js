@@ -45,7 +45,7 @@ module.exports = {
               { text: 'npm', link: '/know/engineering/npm/' },
               { text: 'webpack', link: '/know/engineering/webpack/' },
               { text: 'react', link: '/know/engineering/react/' },
-            ]
+            ],
           },
           {
             text: '计算机基础',
@@ -53,8 +53,8 @@ module.exports = {
             items: [
               { text: '算法', link: '/know/computer/algorithm/' },
               { text: '数据结构', link: '/know/computer/data/' },
-              { text: '网络', link: '/know/computer/network/' }
-            ]
+              { text: '网络', link: '/know/computer/network/' },
+            ],
           },
           {
             text: '工具',
@@ -71,15 +71,22 @@ module.exports = {
         ariaLabel: '解决方案',
         items: [
           {
-            text: '通用', ariaLabel: '通用', link: '/answer/common/',
+            text: '面试',
+            ariaLabel: '面试',
+            link: '/answer/interview/',
+            items: [{ text: '前端基础', link: '/answer/interview/basic/' }],
+          },
+          {
+            text: '通用',
+            ariaLabel: '通用',
+            link: '/answer/common/',
           },
           {
             text: '音视频',
             ariaLabel: '音视频',
-            items: [
-              { text:'webRTC', link: '/answer/webRTC/'}
-          ] },
-        ]
+            items: [{ text: 'webRTC', link: '/answer/webRTC/' }],
+          },
+        ],
       },
       {
         text: '源码阅读',
@@ -88,13 +95,15 @@ module.exports = {
           {
             text: 'npm包',
             link: '/code/npm/',
-          }, {
+          },
+          {
             text: 'react系列',
             link: '/code/react/',
-          }, {
+          },
+          {
             text: '源码共读',
-            link: '/code/opensource/'
-          }
+            link: '/code/opensource/',
+          },
         ],
       },
       {
@@ -108,8 +117,15 @@ module.exports = {
         ['HTML', '/know/front/html/'],
         ['CSS', '/know/front/css/'],
       ]),
-      '/know/javascript/': addCommonConfig([['基础知识','/know/javascript/basic/'],['进阶知识','/know/javascript/advance/']]),
-      '/know/engineering/': addCommonConfig([['npm', '/know/engineering/npm/'], ['webpack', '/know/engineering/webpack/'], ['react', '/know/engineering/react/']]),
+      '/know/javascript/': addCommonConfig([
+        ['基础知识', '/know/javascript/basic/'],
+        ['进阶知识', '/know/javascript/advance/'],
+      ]),
+      '/know/engineering/': addCommonConfig([
+        ['npm', '/know/engineering/npm/'],
+        ['webpack', '/know/engineering/webpack/'],
+        ['react', '/know/engineering/react/'],
+      ]),
       '/know/computer/': addCommonConfig([
         ['算法', '/know/computer/algorithm/'],
         ['数据结构', '/know/computer/data/'],
@@ -117,11 +133,10 @@ module.exports = {
       ]),
       '/know/tool/': addCommonConfig([
         ['Git', '/know/tool/git/'],
-        ['Vscode', '/know/tool/vscode/'], 
+        ['Vscode', '/know/tool/vscode/'],
       ]),
       '/posts/': addCommonConfig([['每日一题', '/posts/']]),
-      '/answer/common/':
-        [
+      '/answer/common/': [
         {
           title: '前端',
           collapsable: false,
@@ -147,7 +162,13 @@ module.exports = {
           children: getFilesByPath('/answer/common/interview/'),
         },
       ],
-      '/answer/webRTC/': addCommonConfig([['webRTC', '/answer/webRTC/'],['Janus', '/answer/webRTC/janus/']]),
+      '/answer/webRTC/': addCommonConfig([
+        ['webRTC', '/answer/webRTC/'],
+        ['Janus', '/answer/webRTC/janus/'],
+      ]),
+      '/answer/interview/': addCommonConfig([
+        ['前端基础', '/answer/interview/basic/'],
+      ]),
       '/workshop/': addCommonConfig([['cli', '/workshop/cli/']]),
       '/code/npm/': [
         {
@@ -156,9 +177,13 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: getFilesByPath('/code/npm/'),
-        }
+        },
       ],
-      '/code/react/': addCommonConfig([['react', '/code/react/react/'], ['redux', '/code/react/redux/'], ['router', '/code/react/router/']]),
+      '/code/react/': addCommonConfig([
+        ['react', '/code/react/react/'],
+        ['redux', '/code/react/redux/'],
+        ['router', '/code/react/router/'],
+      ]),
       '/code/opensource/': addCommonConfig([['源码共读', '/code/opensource/']]),
     },
   },
@@ -188,7 +213,7 @@ module.exports = {
       },
     ],
     ['vuepress-plugin-mathjax'],
-    ['@vuepress/back-to-top']
+    ['@vuepress/back-to-top'],
   ],
 }
 
@@ -214,7 +239,12 @@ function sort(data) {
   // 标题删除 排序数字
   return data.map((item) => ({
     ...item,
-    title: item.title.split('-')[1] ? item.title.split('-').slice(1) .join('-') : item.title,
+    title: item.title.split('-')[1]
+      ? item.title
+          .split('-')
+          .slice(1)
+          .join('-')
+      : item.title,
   }))
 }
 
