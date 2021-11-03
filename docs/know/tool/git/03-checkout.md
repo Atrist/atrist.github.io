@@ -11,3 +11,6 @@ $ git checkout 67f6c41e8deb55b12ff7bbd96a689eb464a8a0ac
 Previous HEAD position was 5ef286f 5.0.0
 HEAD is now at 67f6c41 4.0.0
 ```
+
+### --orphan
+从源头切换一个分支
