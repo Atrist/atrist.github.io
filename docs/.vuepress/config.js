@@ -45,6 +45,7 @@ module.exports = {
               { text: 'npm', link: '/know/engineering/npm/' },
               { text: 'webpack', link: '/know/engineering/webpack/' },
               { text: 'react', link: '/know/engineering/react/' },
+              { text: 'Typescript', link: '/know/engineering/typescript/' },
             ],
           },
           {
@@ -122,9 +123,10 @@ module.exports = {
         ['进阶知识', '/know/javascript/advance/'],
       ]),
       '/know/engineering/': addCommonConfig([
+        ['react', '/know/engineering/react/'],
         ['npm', '/know/engineering/npm/'],
         ['webpack', '/know/engineering/webpack/'],
-        ['react', '/know/engineering/react/'],
+        ['Typescript', '/know/engineering/typescript/']
       ]),
       '/know/computer/': addCommonConfig([
         ['算法', '/know/computer/algorithm/'],
