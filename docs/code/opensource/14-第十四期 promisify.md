@@ -129,7 +129,6 @@ function promisify(original){
 }
 ```
 
-## childProcess.ex
 ## 参考资料
 - [github1s node utils 源码](https://github1s.com/nodejs/node/blob/master/lib/internal/util.js)
 - [Reflect apply](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply)
