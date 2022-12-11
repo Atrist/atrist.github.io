@@ -2,7 +2,7 @@ language: node_js
 # install默认值：npm install
 # script默认值：npm test
 node_js:
-  - lts/*
+  - 17
 script:
   - yarn install # npm install
   - yarn build # npm run docs:build
