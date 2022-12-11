@@ -6,3 +6,4 @@ demo.js
 .cache
 .temp
 *.lock
+package-lock.json

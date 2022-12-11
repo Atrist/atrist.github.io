@@ -123,6 +123,10 @@ module.exports = {
 				link: "/workshop/",
 				items: [{ text: "Cli", link: "/workshop/cli/" }],
 			},
+			{
+				text: "简历",
+				link: "/resume",
+			},
 		],
 		sidebar: {
 			"/know/front/": addCommonConfig([
