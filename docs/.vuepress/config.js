@@ -156,8 +156,7 @@ module.exports = {
 			"/know/engineering/": addCommonConfig([
 				["react", "/know/engineering/react/"],
 				["npm", "/know/engineering/npm/"],
-				["webpack", "/know/engineering/webpack/"],
-				["typescript", "/know/engineering/typescript/"],
+				["webpack", "/know/engineering/webpack/"]
 			]),
 			"/know/computer/": addCommonConfig([
 				["算法", "/know/computer/algorithm/"],
