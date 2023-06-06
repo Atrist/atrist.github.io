@@ -26,8 +26,8 @@ module.exports = {
 		search: false,
 		nav: [
 			{
-				text: "前端",
-				ariaLabel: "前端",
+				text: "编程",
+				ariaLabel: "编程",
 				items: [
 					{
 						text: "基础",
@@ -90,6 +90,7 @@ module.exports = {
 					},
 					{
 						text: "通用",
+
 						ariaLabel: "通用",
 						link: "/answer/common/",
 					},
@@ -97,6 +98,12 @@ module.exports = {
 						text: "音视频",
 						ariaLabel: "音视频",
 						items: [{ text: "webRTC", link: "/answer/webRTC/" }],
+					},
+					{
+						text: "投资",
+						ariaLabel: "投资",
+						link: "/answer/invest/",
+						items: [{ text: "书籍", link: "/answer/invest/" }],
 					},
 				],
 			},
@@ -200,6 +207,9 @@ module.exports = {
 			]),
 			"/answer/interview/": addCommonConfig([
 				["前端基础", "/answer/interview/basic/"],
+			]),
+			"/answer/invest/": addCommonConfig([
+				["书籍", "/answer/invest/book/"],
 			]),
 			"/workshop/": addCommonConfig([["cli", "/workshop/cli/"]]),
 			"/code/npm/": [
