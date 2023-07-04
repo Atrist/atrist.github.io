@@ -30,7 +30,7 @@ module.exports = {
 				ariaLabel: "编程",
 				items: [
 					{
-						text: "基础",
+						text: "前端",
 						link: "/know/front/",
 						items: [
 							{ text: "HTML", link: "/know/front/html/" },
@@ -42,12 +42,12 @@ module.exports = {
 						text: "工程化",
 						ariaLabel: "工程化",
 						items: [
-							{ text: "npm", link: "/know/engineering/npm/" },
+							{ text: "react", link: "/know/engineering/react/" },
 							{
 								text: "webpack",
 								link: "/know/engineering/webpack/",
 							},
-							{ text: "react", link: "/know/engineering/react/" },
+							{ text: "npm", link: "/know/engineering/npm/" },
 							{
 								text: "typescript",
 								link: "/know/typescript/",
@@ -139,6 +139,7 @@ module.exports = {
 			"/know/front/": addCommonConfig([
 				["HTML", "/know/front/html/"],
 				["CSS", "/know/front/css/"],
+
 			]),
 			"/know/typescript/": [
 				{
