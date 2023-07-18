@@ -27,3 +27,6 @@ Vue2 与Vue3的生命周期对比
 | updated(数据更新，虚拟DOM渲染完成)        | onUpdated(数据更新，虚拟DOM渲染完成)        |
 | beforeDestroy(组件销毁之前)               | onBeforeUnmount(组件销毁之前)               |
 | destroyed(组件销毁之后)                   | onUnmounted(组件销毁之后)                   |
+
+## Vuex的5个核心属性是什么？
+分别是 state、getters、mutations、actions、modules
