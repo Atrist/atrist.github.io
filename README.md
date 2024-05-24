@@ -13,4 +13,4 @@
 2. 项目编译: build
 
 ## roadmap
-![roadmap](./frontend.pdf)
+![roadmap](./frontend.jpg)
