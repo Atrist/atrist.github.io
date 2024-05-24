@@ -7,3 +7,4 @@ demo.js
 .temp
 *.lock
 package-lock.json
+public
