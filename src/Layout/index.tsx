@@ -7,9 +7,6 @@ const Index = ({ children }) => (
       导航栏
     </nav>
     {children}
-    <footer>
-      页脚
-    </footer>
   </>
 );
 
