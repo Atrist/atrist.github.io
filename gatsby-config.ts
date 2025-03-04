@@ -11,6 +11,57 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                return {
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                };
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { frontmatter: { date: DESC } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: `/rss.xml`, // 生成的 RSS 文件路径
+            title: `Your Site's RSS Feed`, // Feed 的标题
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-less',
       options: {
         cssLoaderOptions: {
@@ -22,12 +73,15 @@ const config: GatsbyConfig = {
         },
       },
     },
-    'gatsby-plugin-sitemap', {
+    'gatsby-plugin-sitemap',
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
       },
-    }, 'gatsby-transformer-remark', {
+    },
+    'gatsby-transformer-remark',
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
@@ -43,7 +97,8 @@ const config: GatsbyConfig = {
         path: './blog/',
       },
       __key: 'blogs',
-    }],
+    },
+  ],
 };
 
 export default config;

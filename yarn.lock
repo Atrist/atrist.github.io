@@ -4274,6 +4274,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     gatsby: "npm:^5.11.0"
+    gatsby-plugin-feed: "npm:^5.14.0"
     gatsby-plugin-google-gtag: "npm:^5.11.0"
     gatsby-plugin-image: "npm:^3.14.0"
     gatsby-plugin-less: "npm:^7.11.0"
@@ -8038,6 +8039,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-feed@npm:^5.14.0":
+  version: 5.14.0
+  resolution: "gatsby-plugin-feed@npm:5.14.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.13"
+    common-tags: "npm:^1.8.2"
+    fs-extra: "npm:^11.2.0"
+    gatsby-plugin-utils: "npm:^4.14.0"
+    lodash.merge: "npm:^4.6.2"
+    rss: "npm:^1.2.2"
+  peerDependencies:
+    gatsby: ^5.0.0-next
+    react: ^18.0.0 || ^0.0.0
+    react-dom: ^18.0.0 || ^0.0.0
+  checksum: 10c0/945180b92b5439849ed98f75bbe7b6e407ddc9e3754241721f5564b6b2ca81ab8249dcad4f185a0eec91495b67b820337ef785dea271b9f8ec6d4a7ad39cc9b4
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-google-gtag@npm:^5.11.0":
   version: 5.14.0
   resolution: "gatsby-plugin-google-gtag@npm:5.14.0"
@@ -11742,6 +11761,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mime-db@npm:~1.25.0":
+  version: 1.25.0
+  resolution: "mime-db@npm:1.25.0"
+  checksum: 10c0/a90951c80700314d6131e106cbf56ae94718d046e9669a5afd7f91e603248da328aad5b63314865fd9547f4688465ac62d1ace59e1ffdb73688452a28a9c3622
+  languageName: node
+  linkType: hard
+
+"mime-types@npm:2.1.13":
+  version: 2.1.13
+  resolution: "mime-types@npm:2.1.13"
+  dependencies:
+    mime-db: "npm:~1.25.0"
+  checksum: 10c0/a53a0453f7863fa2d823025ce92978f5142a18528316caa53cbb1d4212be847973e9a5f2466362cbd2351a512e369252fc2c88c9c5bbc85df4bd8b42214f1785
+  languageName: node
+  linkType: hard
+
 "mime-types@npm:^2.1.12, mime-types@npm:^2.1.27, mime-types@npm:^2.1.31, mime-types@npm:~2.1.24, mime-types@npm:~2.1.34":
   version: 2.1.35
   resolution: "mime-types@npm:2.1.35"
@@ -14360,6 +14395,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rss@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "rss@npm:1.2.2"
+  dependencies:
+    mime-types: "npm:2.1.13"
+    xml: "npm:1.0.1"
+  checksum: 10c0/7e37a6ed1820b69476c76e4fefe09f69dd7505408e9fc7690441a5190aca2e2e2faf8d19575fd1efd66debfb178893374fbff9abf68e5416f5e4d4cccb7ae8b9
+  languageName: node
+  linkType: hard
+
 "run-async@npm:^2.4.0":
   version: 2.4.1
   resolution: "run-async@npm:2.4.1"
@@ -16798,6 +16843,13 @@ __metadata:
   version: 4.0.0
   resolution: "xdg-basedir@npm:4.0.0"
   checksum: 10c0/1b5d70d58355af90363a4e0a51c992e77fc5a1d8de5822699c7d6e96a6afea9a1e048cb93312be6870f338ca45ebe97f000425028fa149c1e87d1b5b8b212a06
+  languageName: node
+  linkType: hard
+
+"xml@npm:1.0.1":
+  version: 1.0.1
+  resolution: "xml@npm:1.0.1"
+  checksum: 10c0/04bcc9b8b5e7b49392072fbd9c6b0f0958bd8e8f8606fee460318e43991349a68cbc5384038d179ff15aef7d222285f69ca0f067f53d071084eb14c7fdb30411
   languageName: node
   linkType: hard
 
