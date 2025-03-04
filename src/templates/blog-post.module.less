@@ -1,12 +1,31 @@
-.content {
+.main {
     display: flex;
-    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    .slide_menu {
+        flex: 2;
+        overflow-y: auto;
+        height: 100vh;
+        // white-space: r;
+        // text-wrap: break-world;
+        overflow-wrap: break-word;
+    }
+
+    .content {
+        flex: 8;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        overflow-y: auto;
+    }
 }
+
+
 
 :global {
     .markdown-body {
-
-        display: flex;
         justify-content: center;
         box-sizing: border-box;
         min-width: 200px;
@@ -15,6 +34,7 @@
         padding: 45px;
 
         width: 800px;
+
     }
 
     @media (max-width: 767px) {

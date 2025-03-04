@@ -7,10 +7,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // console.log('node.internal.type: ', node.internal.type);
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({ node, getNode, basePath: 'blogs' });
+    console.log('slug: ', slug, `/blog/${slug}`);
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: `/blog${slug}`,
     });
   }
 };
@@ -37,8 +38,6 @@ exports.createPages = async ({ graphql, actions }) => {
       path: node.fields.slug,
       component: path.resolve('./src/templates/blog-post.tsx'),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
     });
