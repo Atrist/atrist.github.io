@@ -8,8 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "develop": "gatsby develop -H local-ip",
+    "start": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -30,7 +30,7 @@
     "github-markdown-css": "^5.8.1",
     "less": "^4.2.0",
     "lodash": "^4.17.21",
-    "prettier": "^3.5.3",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -47,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.1.6"
   },
   "packageManager": "yarn@4.7.0"

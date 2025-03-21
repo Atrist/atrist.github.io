@@ -2,17 +2,32 @@ import type { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
 import { flatMap } from 'lodash';
 import { graphql } from 'gatsby';
+import Header from '../components/Head';
 import * as styles from './index.less';
 import Layout from '../Layout/index';
 
-const Index: React.FC<PageProps> = ({ data }) => {
+interface Props extends PageProps {
+  data: {
+    allMarkdownRemark: { edges: { node: { fields: { slug: string } } }[] };
+    site: {
+      siteMetadata: {
+        title: string;
+        description: string;
+        siteUrl: string;
+      };
+    };
+  };
+}
+const Index: React.FC<Props> = ({ data }) => {
   console.log('data: ', data);
   const list = React.useMemo(() => flatMap(data.allMarkdownRemark.edges, (res) => res.node.fields.slug), []);
   return (
-    <Layout>
-      <main>首页 Index 相关介绍内容</main>
-      <a href="/blog">博客</a>
-    </Layout>
+    <>
+      <Header site={data.site} />
+      <main>
+        首页 ··Index 相关介绍内容 <a href="/blog">博客</a>
+      </main>
+    </>
   );
 };
 
@@ -31,6 +46,13 @@ export const query = graphql`
             slug
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
       }
     }
   }
