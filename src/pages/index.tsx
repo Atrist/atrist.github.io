@@ -38,6 +38,7 @@ export function Head() {
     <>
       <title>Atrist's blog</title>
       <meta name="msvalidate.01" content="6D96B3F0B71EDBBBB8BBECF7EF6625C3" />
+      <meta name="google-site-verification" content="dmBwuwXMb8fdF5HD1TOPyGTFAQUzV9O9vN4Mh06slnY" />
       <meta name="google-site-verification" content="a_mtlHvwUie3om9UEQU-Hl7a4o4IKKPsXOpzRq6PQi8" />
       <meta name="google-site-verification" content="dTnTw2DBmb_Ozmr8cWOrn-7xGneMxMh0ug0L8rhmkf8" />
       <meta name="baidu-site-verification" content="codeva-qhHKlrdUjL" />
