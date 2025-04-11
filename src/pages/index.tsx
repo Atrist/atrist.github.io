@@ -34,7 +34,12 @@ const Index: React.FC<Props> = ({ data }) => {
 export default Index;
 
 export function Head() {
-  return <title>Home Page</title>;
+  return (
+    <>
+      <title>Atrist's blog</title>
+      <meta name="google-site-verification" content="a_mtlHvwUie3om9UEQU-Hl7a4o4IKKPsXOpzRq6PQi8" />
+    </>
+  );
 }
 
 export const query = graphql`
