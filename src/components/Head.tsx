@@ -20,7 +20,8 @@ export default (props: HeadProps) => {
       <div className={styles.nav}>
         {navConfig.map((item) => {
           if (item.items) {
-            return <div>{item.text}</div>;
+            // 再生成一个 鼠标悬浮的下拉菜单
+            return <div className={styles.title}>{item.text}</div>;
           }
           return (
             <Link
