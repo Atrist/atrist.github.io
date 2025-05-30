@@ -132,7 +132,7 @@ module.exports = {
 			},
 			{
 				text: "简历",
-				link: "/resume.pdf",
+				link: "/resume",
 			},
 		],
 		sidebar: {
