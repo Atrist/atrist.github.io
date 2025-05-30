@@ -5,6 +5,5 @@ demo.js
 */dist
 .cache
 .temp
-*.lock
 package-lock.json
 public
