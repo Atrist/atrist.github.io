@@ -3,12 +3,12 @@
 - 本科/重庆交通大学/2021届/物联网工程
 - 手机/微信: 18423375819
 - Email: atristmu@outlook.com
-- 工作经验: 2年
-- Github: https://github.com/Atrist
+- 工作经验: 4年
+- Github:  [https://github.com/Atrist](https://github.com/Atrist)
 
 ## 工作经验
 
-### 成都麦可思技术有限公司（2021年8月～至今）
+### 成都麦可思技术有限公司（2023年8月～至今）
 -
 ### 杭州华橙网络科技有限公司（2021年7月~2023年6月）
 - 负责开放平台日常前端版本开发

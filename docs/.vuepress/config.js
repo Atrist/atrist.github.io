@@ -26,8 +26,8 @@ module.exports = {
 		search: false,
 		nav: [
 			{
-				text: "编程",
-				ariaLabel: "编程",
+				text: "知识库",
+				ariaLabel: "知识库",
 				items: [
 					{
 						text: "前端",
