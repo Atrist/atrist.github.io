@@ -7,3 +7,11 @@ demo.js
 .temp
 package-lock.json
 public
+
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn/*
