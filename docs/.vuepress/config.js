@@ -236,14 +236,14 @@ module.exports = {
 		[
 			"sitemap",
 			{
-				hostname: "https://atrist.github.io/",
+				hostname: "https://ricardo.github.io/",
 			},
 		],
 		[
 			"autometa",
 			{
 				site: {
-					name: "Atrist",
+					name: "Ricardo",
 				},
 			},
 		],
